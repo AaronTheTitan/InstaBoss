@@ -144,6 +144,7 @@
                                     <constraint firstItem="r76-ge-e5U" firstAttribute="top" secondItem="dt0-Fb-e2w" secondAttribute="top" constant="25" id="65B-Zo-pDm"/>
                                     <constraint firstAttribute="centerY" secondItem="h4o-bU-R4N" secondAttribute="centerY" constant="-64" id="7g9-oK-Q2O"/>
                                     <constraint firstItem="r76-ge-e5U" firstAttribute="leading" secondItem="dt0-Fb-e2w" secondAttribute="leading" constant="25" id="Mik-eA-3qQ"/>
+                                    <constraint firstItem="Xp1-Oh-zTG" firstAttribute="leading" secondItem="h4o-bU-R4N" secondAttribute="trailing" constant="52" id="P6G-lw-QMf"/>
                                     <constraint firstAttribute="centerX" secondItem="h4o-bU-R4N" secondAttribute="centerX" constant="189.5" id="R72-uv-acU"/>
                                     <constraint firstAttribute="centerX" secondItem="r76-ge-e5U" secondAttribute="centerX" id="SmE-ct-qHO"/>
                                     <constraint firstAttribute="centerY" secondItem="Xp1-Oh-zTG" secondAttribute="centerY" constant="49.5" id="T8w-LA-Dqy"/>
@@ -152,7 +153,6 @@
                                     <constraint firstItem="Xp1-Oh-zTG" firstAttribute="leading" secondItem="h4o-bU-R4N" secondAttribute="trailing" constant="49" id="c0z-6T-tAv"/>
                                     <constraint firstAttribute="centerX" secondItem="Xp1-Oh-zTG" secondAttribute="centerX" constant="190" id="d1T-X3-hIk"/>
                                     <constraint firstAttribute="centerX" secondItem="Xp1-Oh-zTG" secondAttribute="centerX" id="iAl-T7-slG"/>
-                                    <constraint firstAttribute="centerX" secondItem="h4o-bU-R4N" secondAttribute="centerX" constant="101.5" id="lIZ-dV-N3R"/>
                                     <constraint firstAttribute="trailing" secondItem="r76-ge-e5U" secondAttribute="trailing" id="oFQ-fN-36X"/>
                                     <constraint firstAttribute="centerY" secondItem="Xp1-Oh-zTG" secondAttribute="centerY" constant="-177.5" id="ohA-3m-Dxa"/>
                                     <constraint firstAttribute="centerX" secondItem="Xp1-Oh-zTG" secondAttribute="centerX" id="s4o-ay-6Ve"/>
@@ -184,7 +184,6 @@
                                         <exclude reference="2ke-7i-MrQ"/>
                                         <include reference="7g9-oK-Q2O"/>
                                         <include reference="R72-uv-acU"/>
-                                        <exclude reference="lIZ-dV-N3R"/>
                                         <include reference="T8w-LA-Dqy"/>
                                         <include reference="d1T-X3-hIk"/>
                                         <exclude reference="iAl-T7-slG"/>
