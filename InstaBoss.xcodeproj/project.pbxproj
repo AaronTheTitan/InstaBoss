@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		887AEFE71A81469A007153E4 /* SampleTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFE61A81469A007153E4 /* SampleTabViewController.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
-		9138C7631A813EBB0097C0EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* ViewController.m */; };
+		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
 		9138C7661A813EBB0097C0EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9138C7641A813EBB0097C0EA /* Main.storyboard */; };
 		9138C7681A813EBB0097C0EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9138C7671A813EBB0097C0EA /* Images.xcassets */; };
 		9138C76B1A813EBB0097C0EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9138C7691A813EBB0097C0EA /* LaunchScreen.xib */; };
@@ -27,13 +28,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		887AEFE51A81469A007153E4 /* SampleTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTabViewController.h; sourceTree = "<group>"; };
+		887AEFE61A81469A007153E4 /* SampleTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTabViewController.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9138C75E1A813EBB0097C0EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9138C75F1A813EBB0097C0EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9138C7611A813EBB0097C0EA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9138C7621A813EBB0097C0EA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9138C7611A813EBB0097C0EA /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		9138C7621A813EBB0097C0EA /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		9138C7651A813EBB0097C0EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9138C7671A813EBB0097C0EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9138C76A1A813EBB0097C0EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -129,8 +132,10 @@
 		9138C7811A813EE20097C0EA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9138C7611A813EBB0097C0EA /* ViewController.h */,
-				9138C7621A813EBB0097C0EA /* ViewController.m */,
+				9138C7611A813EBB0097C0EA /* HomeViewController.h */,
+				9138C7621A813EBB0097C0EA /* HomeViewController.m */,
+				887AEFE51A81469A007153E4 /* SampleTabViewController.h */,
+				887AEFE61A81469A007153E4 /* SampleTabViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -235,7 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9138C7631A813EBB0097C0EA /* ViewController.m in Sources */,
+				887AEFE71A81469A007153E4 /* SampleTabViewController.m in Sources */,
+				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,
 			);
@@ -428,6 +434,7 @@
 				9138C77C1A813EBB0097C0EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9138C77D1A813EBB0097C0EA /* Build configuration list for PBXNativeTarget "InstaBossTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +443,7 @@
 				9138C77F1A813EBB0097C0EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
