@@ -35,28 +35,28 @@
 
 }
 
-- (IBAction)selectPhoto:(UIButton *)sender {
-
-    UIImagePickerController *picker = [UIImagePickerController new];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-
-    [self presentViewController:picker animated:YES completion:NULL];
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-
-//    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    Photo *photo = [Photo new];
-
-//    PFObject *photo = [PFObject objectWithClassName:@"Photo"];
-
-    photo.photo = info[UIImagePickerControllerEditedImage];
-    self.imageViewMain.image = photo;
-
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-}
+//- (IBAction)selectPhoto:(UIButton *)sender {
+//
+//    UIImagePickerController *picker = [UIImagePickerController new];
+//    picker.delegate = self;
+//    picker.allowsEditing = YES;
+//    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//
+//    [self presentViewController:picker animated:YES completion:NULL];
+//}
+//
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+//
+////    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+//    Photo *photo = [Photo new];
+//
+////    PFObject *photo = [PFObject objectWithClassName:@"Photo"];
+//
+//    photo.photo = info[UIImagePickerControllerEditedImage];
+//    self.imageViewMain.image = photo;
+//
+//    [picker dismissViewControllerAnimated:YES completion:NULL];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
