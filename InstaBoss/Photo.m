@@ -1,16 +1,17 @@
 //
-//  ViewController.h
+//  Photo.m
 //  InstaBoss
 //
 //  Created by Aaron Bradley on 2/3/15.
 //  Copyright (c) 2015 Aaron Bradley. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
+#import "Photo.h"
 
-@interface HomeViewController : UIViewController
+@implementation Photo
 
+- (void)showPhoto {
+
+}
 
 @end
-
