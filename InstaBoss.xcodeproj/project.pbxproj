@@ -81,13 +81,9 @@
 		9138C7591A813EBB0097C0EA /* InstaBoss */ = {
 			isa = PBXGroup;
 			children = (
-				9138C75E1A813EBB0097C0EA /* AppDelegate.h */,
-				9138C75F1A813EBB0097C0EA /* AppDelegate.m */,
-				9138C7611A813EBB0097C0EA /* ViewController.h */,
-				9138C7621A813EBB0097C0EA /* ViewController.m */,
 				9138C7641A813EBB0097C0EA /* Main.storyboard */,
-				9138C7671A813EBB0097C0EA /* Images.xcassets */,
-				9138C7691A813EBB0097C0EA /* LaunchScreen.xib */,
+				9138C7811A813EE20097C0EA /* View Controllers */,
+				9138C7801A813ECD0097C0EA /* Defaults */,
 				9138C75A1A813EBB0097C0EA /* Supporting Files */,
 			);
 			path = InstaBoss;
@@ -117,6 +113,26 @@
 				9138C7751A813EBB0097C0EA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9138C7801A813ECD0097C0EA /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				9138C75E1A813EBB0097C0EA /* AppDelegate.h */,
+				9138C75F1A813EBB0097C0EA /* AppDelegate.m */,
+				9138C7671A813EBB0097C0EA /* Images.xcassets */,
+				9138C7691A813EBB0097C0EA /* LaunchScreen.xib */,
+			);
+			name = Defaults;
+			sourceTree = "<group>";
+		};
+		9138C7811A813EE20097C0EA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9138C7611A813EBB0097C0EA /* ViewController.h */,
+				9138C7621A813EBB0097C0EA /* ViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
