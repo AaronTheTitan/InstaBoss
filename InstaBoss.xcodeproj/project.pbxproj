@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		887AEFEA1A81622A007153E4 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFE91A81622A007153E4 /* PictureViewController.m */; };
 		887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFED1A816502007153E4 /* CameraViewController.m */; };
 		887AEFF31A818626007153E4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF01A818626007153E4 /* Photo.m */; };
 		887AEFF41A818626007153E4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF21A818626007153E4 /* User.m */; };
@@ -47,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		887AEFE81A81622A007153E4 /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
-		887AEFE91A81622A007153E4 /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		887AEFEC1A816502007153E4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		887AEFED1A816502007153E4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		887AEFEF1A818626007153E4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
@@ -123,8 +120,6 @@
 		887AEFEB1A8164EA007153E4 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				887AEFE81A81622A007153E4 /* PictureViewController.h */,
-				887AEFE91A81622A007153E4 /* PictureViewController.m */,
 				887AEFEC1A816502007153E4 /* CameraViewController.h */,
 				887AEFED1A816502007153E4 /* CameraViewController.m */,
 			);
@@ -347,7 +342,6 @@
 				887AEFF41A818626007153E4 /* User.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
-				887AEFEA1A81622A007153E4 /* PictureViewController.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,
 			);

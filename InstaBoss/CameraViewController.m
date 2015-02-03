@@ -11,6 +11,7 @@
 @interface CameraViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *viewCamera;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSavePicture;
 
 @end
 
@@ -18,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.buttonSavePicture.enabled = NO;
 
     [self isCameraEnabled];
 }
@@ -63,7 +66,9 @@
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = source;
-    [self presentViewController:picker animated:YES completion:NULL];
+    [self presentViewController:picker animated:YES completion:^{
+        self.buttonSavePicture.enabled = true;
+    }];
 
 }
 
