@@ -1,5 +1,5 @@
 //
-//  SampleTabViewController.h
+//  PictureViewController.h
 //  InstaBoss
 //
 //  Created by Fiaz Sami on 2/3/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SampleTabViewController : UIViewController
+@interface PictureViewController : UIViewController
 
 @end

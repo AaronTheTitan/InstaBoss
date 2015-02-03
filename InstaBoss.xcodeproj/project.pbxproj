@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		887AEFE71A81469A007153E4 /* SampleTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFE61A81469A007153E4 /* SampleTabViewController.m */; };
+		887AEFEA1A81622A007153E4 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFE91A81622A007153E4 /* PictureViewController.m */; };
+		887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFED1A816502007153E4 /* CameraViewController.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -28,8 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		887AEFE51A81469A007153E4 /* SampleTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTabViewController.h; sourceTree = "<group>"; };
-		887AEFE61A81469A007153E4 /* SampleTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTabViewController.m; sourceTree = "<group>"; };
+		887AEFE81A81622A007153E4 /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
+		887AEFE91A81622A007153E4 /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		887AEFEC1A816502007153E4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		887AEFED1A816502007153E4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		887AEFEB1A8164EA007153E4 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				887AEFE81A81622A007153E4 /* PictureViewController.h */,
+				887AEFE91A81622A007153E4 /* PictureViewController.m */,
+				887AEFEC1A816502007153E4 /* CameraViewController.h */,
+				887AEFED1A816502007153E4 /* CameraViewController.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
 		9138C74E1A813EBB0097C0EA = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +146,9 @@
 		9138C7811A813EE20097C0EA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				887AEFEB1A8164EA007153E4 /* Camera */,
 				9138C7611A813EBB0097C0EA /* HomeViewController.h */,
 				9138C7621A813EBB0097C0EA /* HomeViewController.m */,
-				887AEFE51A81469A007153E4 /* SampleTabViewController.h */,
-				887AEFE61A81469A007153E4 /* SampleTabViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -240,8 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				887AEFE71A81469A007153E4 /* SampleTabViewController.m in Sources */,
+				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
+				887AEFEA1A81622A007153E4 /* PictureViewController.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,
 			);
