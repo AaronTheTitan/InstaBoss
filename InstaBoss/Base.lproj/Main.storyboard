@@ -85,7 +85,6 @@
                                         </variation>
                                         <connections>
                                             <action selector="tapButtonTakePicture:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AIQ-Wc-vlb"/>
-                                            <segue destination="fVY-V5-HnF" kind="presentation" modalTransitionStyle="flipHorizontal" id="3mX-pv-Tiy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4o-bU-R4N">
@@ -228,7 +227,7 @@
         <!--Picture View Controller-->
         <scene sceneID="6HY-Gd-BNs">
             <objects>
-                <viewController id="fVY-V5-HnF" customClass="PictureViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmPicture" id="fVY-V5-HnF" customClass="PictureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aqp-I8-GT1"/>
                         <viewControllerLayoutGuide type="bottom" id="roo-wq-UZ0"/>
