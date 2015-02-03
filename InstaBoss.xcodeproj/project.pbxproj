@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		887AEFEA1A81622A007153E4 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFE91A81622A007153E4 /* PictureViewController.m */; };
 		887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFED1A816502007153E4 /* CameraViewController.m */; };
+		887AEFF31A818626007153E4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF01A818626007153E4 /* Photo.m */; };
+		887AEFF41A818626007153E4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF21A818626007153E4 /* User.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -33,6 +35,10 @@
 		887AEFE91A81622A007153E4 /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		887AEFEC1A816502007153E4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		887AEFED1A816502007153E4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		887AEFEF1A818626007153E4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		887AEFF01A818626007153E4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		887AEFF11A818626007153E4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		887AEFF21A818626007153E4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +83,17 @@
 			name = Camera;
 			sourceTree = "<group>";
 		};
+		887AEFF51A818632007153E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				887AEFEF1A818626007153E4 /* Photo.h */,
+				887AEFF01A818626007153E4 /* Photo.m */,
+				887AEFF11A818626007153E4 /* User.h */,
+				887AEFF21A818626007153E4 /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		9138C74E1A813EBB0097C0EA = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				9138C7641A813EBB0097C0EA /* Main.storyboard */,
+				887AEFF51A818632007153E4 /* Model */,
 				9138C7811A813EE20097C0EA /* View Controllers */,
 				9138C7801A813ECD0097C0EA /* Defaults */,
 				9138C75A1A813EBB0097C0EA /* Supporting Files */,
@@ -253,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887AEFF31A818626007153E4 /* Photo.m in Sources */,
+				887AEFF41A818626007153E4 /* User.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
 				887AEFEA1A81622A007153E4 /* PictureViewController.m in Sources */,
