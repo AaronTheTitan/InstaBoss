@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		882C48781A825D74009D9597 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882C48771A825D74009D9597 /* SettingsViewController.m */; };
+		883CB8FB1A8297830041559A /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 883CB8FA1A8297830041559A /* SignUpViewController.m */; };
 		887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFED1A816502007153E4 /* CameraViewController.m */; };
 		887AEFF31A818626007153E4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF01A818626007153E4 /* Photo.m */; };
 		887AEFF41A818626007153E4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF21A818626007153E4 /* User.m */; };
@@ -51,8 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		882C48761A825D74009D9597 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		882C48771A825D74009D9597 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		883CB8F91A8297830041559A /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		883CB8FA1A8297830041559A /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		887AEFEC1A816502007153E4 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		887AEFED1A816502007153E4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		887AEFEF1A818626007153E4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
@@ -133,22 +133,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		882C48751A825D65009D9597 /* Settings */ = {
+		883CB8FC1A8297AB0041559A /* Main Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				882C48761A825D74009D9597 /* SettingsViewController.h */,
-				882C48771A825D74009D9597 /* SettingsViewController.m */,
+				9138C7611A813EBB0097C0EA /* HomeViewController.h */,
+				9138C7621A813EBB0097C0EA /* HomeViewController.m */,
+				88D085D31A82436F00CB4B52 /* MainTabBarController.h */,
+				88D085D41A82436F00CB4B52 /* MainTabBarController.m */,
 			);
-			name = Settings;
+			name = "Main Controllers";
 			sourceTree = "<group>";
 		};
-		887AEFEB1A8164EA007153E4 /* Camera */ = {
+		883CB8FD1A8297C00041559A /* Profile Controller */ = {
+			isa = PBXGroup;
+			children = (
+				883CB8F91A8297830041559A /* SignUpViewController.h */,
+				883CB8FA1A8297830041559A /* SignUpViewController.m */,
+			);
+			name = "Profile Controller";
+			sourceTree = "<group>";
+		};
+		887AEFEB1A8164EA007153E4 /* Camera Controller */ = {
 			isa = PBXGroup;
 			children = (
 				887AEFEC1A816502007153E4 /* CameraViewController.h */,
 				887AEFED1A816502007153E4 /* CameraViewController.m */,
 			);
-			name = Camera;
+			name = "Camera Controller";
 			sourceTree = "<group>";
 		};
 		887AEFF51A818632007153E4 /* Model */ = {
@@ -162,7 +173,7 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		88D085CE1A82312500CB4B52 /* Feed */ = {
+		88D085CE1A82312500CB4B52 /* Feed Controller */ = {
 			isa = PBXGroup;
 			children = (
 				88D085D61A824AF300CB4B52 /* CommentsViewController.h */,
@@ -172,7 +183,7 @@
 				88D085CF1A82314500CB4B52 /* FeedCell.h */,
 				88D085D01A82314500CB4B52 /* FeedCell.m */,
 			);
-			name = Feed;
+			name = "Feed Controller";
 			sourceTree = "<group>";
 		};
 		9138C74E1A813EBB0097C0EA = {
@@ -247,13 +258,10 @@
 		9138C7811A813EE20097C0EA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				882C48751A825D65009D9597 /* Settings */,
-				9138C7611A813EBB0097C0EA /* HomeViewController.h */,
-				9138C7621A813EBB0097C0EA /* HomeViewController.m */,
-				88D085D31A82436F00CB4B52 /* MainTabBarController.h */,
-				88D085D41A82436F00CB4B52 /* MainTabBarController.m */,
-				88D085CE1A82312500CB4B52 /* Feed */,
-				887AEFEB1A8164EA007153E4 /* Camera */,
+				883CB8FC1A8297AB0041559A /* Main Controllers */,
+				88D085CE1A82312500CB4B52 /* Feed Controller */,
+				887AEFEB1A8164EA007153E4 /* Camera Controller */,
+				883CB8FD1A8297C00041559A /* Profile Controller */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -291,7 +299,6 @@
 				9138C7531A813EBB0097C0EA /* Sources */,
 				9138C7541A813EBB0097C0EA /* Frameworks */,
 				9138C7551A813EBB0097C0EA /* Resources */,
-				882C486E1A825D36009D9597 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -378,22 +385,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		882C486E1A825D36009D9597 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 3a7b3ca698c683448d7ae95f7aa8f28aa07fd8f4 86917be90ecf46c2770682611bf15f1aeafdd848104964523816326e4f54c48d";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		9138C7531A813EBB0097C0EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -407,8 +398,8 @@
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
-				882C48781A825D74009D9597 /* SettingsViewController.m in Sources */,
 				88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */,
+				883CB8FB1A8297830041559A /* SignUpViewController.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
