@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bTv-wW-YrD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -120,7 +121,7 @@
                                             <action selector="tapButtonCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jFb-j1-fhY"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gwq-Ho-EfG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gwq-Ho-EfG">
                                         <rect key="frame" x="125" y="8" width="350" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="v5n-uu-ChO"/>
@@ -150,12 +151,15 @@
                                     <constraint firstItem="r76-ge-e5U" firstAttribute="top" secondItem="dt0-Fb-e2w" secondAttribute="top" constant="-4" id="Jxk-b6-MhT"/>
                                     <constraint firstItem="Gwq-Ho-EfG" firstAttribute="top" secondItem="dt0-Fb-e2w" secondAttribute="top" constant="8" id="K7U-ek-4dA"/>
                                     <constraint firstAttribute="centerX" secondItem="r76-ge-e5U" secondAttribute="centerX" id="KU0-Uk-DOI"/>
+                                    <constraint firstItem="Gwq-Ho-EfG" firstAttribute="leading" secondItem="dt0-Fb-e2w" secondAttribute="leading" constant="125" id="MEx-ZM-UBV"/>
                                     <constraint firstItem="r76-ge-e5U" firstAttribute="top" secondItem="Gwq-Ho-EfG" secondAttribute="bottom" constant="8" id="MTB-aL-s1z"/>
+                                    <constraint firstItem="Gwq-Ho-EfG" firstAttribute="top" secondItem="dt0-Fb-e2w" secondAttribute="top" constant="8" id="bAQ-fP-6Ff"/>
                                     <constraint firstAttribute="trailing" secondItem="Gwq-Ho-EfG" secondAttribute="trailing" constant="8" id="c2I-IU-tAn"/>
                                     <constraint firstItem="a5e-Ll-awE" firstAttribute="top" secondItem="r76-ge-e5U" secondAttribute="bottom" constant="8" id="dIe-Ka-Bnw"/>
                                     <constraint firstAttribute="trailing" secondItem="r76-ge-e5U" secondAttribute="trailing" id="dgc-Iu-fgM"/>
                                     <constraint firstAttribute="trailing" secondItem="0Nb-Dr-r1Y" secondAttribute="trailing" constant="25" id="dsU-An-CGc"/>
                                     <constraint firstAttribute="centerX" secondItem="a5e-Ll-awE" secondAttribute="centerX" constant="159" id="lgn-BT-zkD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gwq-Ho-EfG" secondAttribute="trailing" constant="125" id="mUX-H6-1r3"/>
                                     <constraint firstAttribute="centerX" secondItem="0Nb-Dr-r1Y" secondAttribute="centerX" constant="-159" id="nCp-dV-Rlw"/>
                                     <constraint firstAttribute="centerY" secondItem="r76-ge-e5U" secondAttribute="centerY" constant="44.5" id="s8B-Qh-Ess"/>
                                     <constraint firstItem="Gwq-Ho-EfG" firstAttribute="leading" secondItem="dt0-Fb-e2w" secondAttribute="leading" constant="8" id="sVx-fJ-R3s"/>
@@ -331,6 +335,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9Zp-53-Yyo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lig-mb-MLe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgp-hg-gQM">
@@ -486,7 +491,7 @@
         <!--Settings-->
         <scene sceneID="qWl-GY-4H6">
             <objects>
-                <viewController id="yWy-ki-9FY" sceneMemberID="viewController">
+                <viewController id="yWy-ki-9FY" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d4F-Id-hRI"/>
                         <viewControllerLayoutGuide type="bottom" id="uj9-Rm-ZO7"/>
