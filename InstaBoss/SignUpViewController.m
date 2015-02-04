@@ -24,7 +24,9 @@
 
     PFUser *user = [PFUser currentUser];
     if (user.username != nil) {
-        [self performSegueWithIdentifier:@"login" sender:self];
+
+    } else {
+
     }
 
 }
@@ -63,7 +65,7 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             NSLog(@"Registration success!");
-            [self performSegueWithIdentifier:@"login" sender:self];
+            [self performSegueWithIdentifier:@"newUserLogin" sender:self];
         }
         else {
             NSLog(@"There was an error in registration");

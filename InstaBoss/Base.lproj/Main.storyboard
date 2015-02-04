@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JC5-Nf-EL4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hiJ-od-0ia">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -505,7 +505,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tapButtonSignUp:" destination="JC5-Nf-EL4" eventType="touchUpInside" id="Boi-mp-zSq"/>
-                                    <segue destination="bTv-wW-YrD" kind="show" identifier="login" id="ogv-fu-aZ1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POc-eJ-JKh">
@@ -517,7 +516,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hiJ-od-0ia" kind="show" identifier="signInUser" id="Oyj-1t-G4a"/>
+                                    <segue destination="hiJ-od-0ia" kind="showDetail" id="rkE-1u-x9T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="InstaBawse!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0j-Nk-IgF">
@@ -544,11 +543,12 @@
                         <outlet property="textFieldPassword" destination="EGP-ab-Se3" id="aPi-OD-Q4Q"/>
                         <outlet property="textFieldPasswordConfirm" destination="b8O-Vz-nnR" id="OBJ-JP-UxT"/>
                         <outlet property="textFieldUsername" destination="66q-DA-6x0" id="YXN-Bk-zzJ"/>
+                        <segue destination="bTv-wW-YrD" kind="show" identifier="newUserLogin" id="ofF-1B-gYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmD-Rm-hoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-228" y="-560"/>
+            <point key="canvasLocation" x="434" y="-562"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="uwC-dR-9hN">
@@ -573,7 +573,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-q1-YuK">
-                                <rect key="frame" x="125" y="212" width="350" height="52"/>
+                                <rect key="frame" x="125" y="212" width="350" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <state key="normal" title="Login">
@@ -581,7 +581,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bTv-wW-YrD" kind="show" id="y17-4I-bV6"/>
+                                    <action selector="tapButtonLogin:" destination="hiJ-od-0ia" eventType="touchUpInside" id="cm1-6s-8Aq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vet-fT-q31">
+                                <rect key="frame" x="125" y="277" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JC5-Nf-EL4" kind="presentation" identifier="" id="qSD-Hj-xEl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -590,16 +602,18 @@
                             <constraint firstAttribute="centerX" secondItem="Nrz-fV-Ul8" secondAttribute="centerX" id="Skc-dY-0Pn"/>
                             <constraint firstAttribute="centerX" secondItem="8BK-q1-YuK" secondAttribute="centerX" id="Z5U-mV-FRV"/>
                             <constraint firstAttribute="centerX" secondItem="bI6-zY-qsg" secondAttribute="centerX" id="jzp-fG-R5k"/>
+                            <constraint firstAttribute="centerX" secondItem="vet-fT-q31" secondAttribute="centerX" id="sQI-LA-Pls"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textFieldPassword" destination="bI6-zY-qsg" id="gTQ-lG-7EA"/>
                         <outlet property="textFieldUsername" destination="Nrz-fV-Ul8" id="CdY-xU-hN4"/>
+                        <segue destination="bTv-wW-YrD" kind="show" identifier="login" id="YTU-eQ-cAl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztR-eY-j5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="-560"/>
+            <point key="canvasLocation" x="-227" y="-562"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="oIL-5y-aT4">
@@ -653,6 +667,6 @@
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ogv-fu-aZ1"/>
+        <segue reference="ofF-1B-gYf"/>
     </inferredMetricsTieBreakers>
 </document>
