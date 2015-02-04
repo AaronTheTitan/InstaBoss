@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bTv-wW-YrD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hiJ-od-0ia">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -463,6 +463,158 @@
             </objects>
             <point key="canvasLocation" x="-967" y="1113"/>
         </scene>
+        <!--InstaBoss-->
+        <scene sceneID="fyd-pt-LUL">
+            <objects>
+                <viewController id="JC5-Nf-EL4" customClass="SignUpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9qI-ag-aSW"/>
+                        <viewControllerLayoutGuide type="bottom" id="HZL-2h-s0h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Id-iD-V7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66q-DA-6x0">
+                                <rect key="frame" x="125" y="138" width="350" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EGP-ab-Se3">
+                                <rect key="frame" x="125" y="176" width="350" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8O-Vz-nnR">
+                                <rect key="frame" x="125" y="214" width="350" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PT1-K1-W7s">
+                                <rect key="frame" x="125" y="252" width="350" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz0-Gy-nDQ">
+                                <rect key="frame" x="125" y="302" width="350" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="Start Sharing">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonSignUp:" destination="JC5-Nf-EL4" eventType="touchUpInside" id="Boi-mp-zSq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POc-eJ-JKh">
+                                <rect key="frame" x="125" y="367" width="350" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="I'm Already Registered">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hiJ-od-0ia" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="flipHorizontal" id="rkE-1u-x9T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="InstaBawse!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0j-Nk-IgF">
+                                <rect key="frame" x="197" y="55" width="207" height="52"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="b8O-Vz-nnR" secondAttribute="centerX" id="9Ab-fU-6DB"/>
+                            <constraint firstAttribute="centerX" secondItem="a0j-Nk-IgF" secondAttribute="centerX" id="9gA-sO-VJf"/>
+                            <constraint firstAttribute="centerX" secondItem="PT1-K1-W7s" secondAttribute="centerX" id="Fz1-sz-CB4"/>
+                            <constraint firstAttribute="centerX" secondItem="POc-eJ-JKh" secondAttribute="centerX" id="PJx-Af-H3H"/>
+                            <constraint firstAttribute="centerX" secondItem="66q-DA-6x0" secondAttribute="centerX" id="k18-FD-MnT"/>
+                            <constraint firstAttribute="centerX" secondItem="EGP-ab-Se3" secondAttribute="centerX" id="nVX-uD-ekk"/>
+                            <constraint firstAttribute="centerX" secondItem="Hz0-Gy-nDQ" secondAttribute="centerX" id="qUw-sS-AII"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="InstaBoss" id="FXt-3T-mRb"/>
+                    <connections>
+                        <outlet property="textFieldEmailAddress" destination="PT1-K1-W7s" id="YxV-Ze-tof"/>
+                        <outlet property="textFieldPassword" destination="EGP-ab-Se3" id="aPi-OD-Q4Q"/>
+                        <outlet property="textFieldPasswordConfirm" destination="b8O-Vz-nnR" id="OBJ-JP-UxT"/>
+                        <outlet property="textFieldUsername" destination="66q-DA-6x0" id="YXN-Bk-zzJ"/>
+                        <segue destination="bTv-wW-YrD" kind="show" identifier="newUserLogin" id="ofF-1B-gYf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmD-Rm-hoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="-562"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="uwC-dR-9hN">
+            <objects>
+                <viewController id="hiJ-od-0ia" customClass="SignInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="49W-lE-LE9"/>
+                        <viewControllerLayoutGuide type="bottom" id="CZi-CY-Nff"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V3U-EJ-Rk8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nrz-fV-Ul8">
+                                <rect key="frame" x="125" y="128" width="350" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bI6-zY-qsg">
+                                <rect key="frame" x="125" y="166" width="350" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-q1-YuK">
+                                <rect key="frame" x="125" y="212" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonLogin:" destination="hiJ-od-0ia" eventType="touchUpInside" id="cm1-6s-8Aq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vet-fT-q31">
+                                <rect key="frame" x="125" y="277" width="350" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="I Don't Have An Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JC5-Nf-EL4" kind="presentation" identifier="" modalTransitionStyle="flipHorizontal" id="qSD-Hj-xEl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Nrz-fV-Ul8" secondAttribute="centerX" id="Skc-dY-0Pn"/>
+                            <constraint firstAttribute="centerX" secondItem="8BK-q1-YuK" secondAttribute="centerX" id="Z5U-mV-FRV"/>
+                            <constraint firstAttribute="centerX" secondItem="bI6-zY-qsg" secondAttribute="centerX" id="jzp-fG-R5k"/>
+                            <constraint firstAttribute="centerX" secondItem="vet-fT-q31" secondAttribute="centerX" id="sQI-LA-Pls"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldPassword" destination="bI6-zY-qsg" id="gTQ-lG-7EA"/>
+                        <outlet property="textFieldUsername" destination="Nrz-fV-Ul8" id="CdY-xU-hN4"/>
+                        <segue destination="bTv-wW-YrD" kind="show" identifier="login" id="YTU-eQ-cAl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztR-eY-j5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-227" y="-562"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="oIL-5y-aT4">
             <objects>
@@ -485,10 +637,10 @@
             </objects>
             <point key="canvasLocation" x="-227" y="191"/>
         </scene>
-        <!--Settings-->
+        <!--Profile-->
         <scene sceneID="qWl-GY-4H6">
             <objects>
-                <viewController id="yWy-ki-9FY" sceneMemberID="viewController">
+                <viewController id="yWy-ki-9FY" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d4F-Id-hRI"/>
                         <viewControllerLayoutGuide type="bottom" id="uj9-Rm-ZO7"/>
@@ -496,9 +648,20 @@
                     <view key="view" contentMode="scaleToFill" id="RJQ-xP-65b">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-A5-Zcc">
+                                <rect key="frame" x="270" y="104" width="60" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonSignOut:" destination="yWy-ki-9FY" eventType="touchUpInside" id="iGt-xJ-FES"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="xxL-2T-Hj7"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="settings" id="xxL-2T-Hj7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohp-5x-2Y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -514,4 +677,7 @@
         <image name="search" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ofF-1B-gYf"/>
+    </inferredMetricsTieBreakers>
 </document>
