@@ -339,7 +339,7 @@
         <!--Feed-->
         <scene sceneID="4fy-xE-uNK">
             <objects>
-                <viewController id="cXk-au-B7r" sceneMemberID="viewController">
+                <viewController id="cXk-au-B7r" customClass="FeedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fhO-Vp-iWc"/>
                         <viewControllerLayoutGuide type="bottom" id="de2-jz-q4m"/>
@@ -347,9 +347,24 @@
                     <view key="view" contentMode="scaleToFill" id="q9e-Q3-npe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-cg-b62">
+                                <rect key="frame" x="0.0" y="28" width="600" height="523"/>
+                                <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oFw-cg-b62" firstAttribute="top" secondItem="fhO-Vp-iWc" secondAttribute="bottom" constant="8" id="CrR-jh-LF9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oFw-cg-b62" secondAttribute="trailing" constant="-16" id="WKz-4s-n0f"/>
+                            <constraint firstItem="oFw-cg-b62" firstAttribute="leading" secondItem="q9e-Q3-npe" secondAttribute="leadingMargin" constant="-16" id="cOQ-wr-knj"/>
+                            <constraint firstItem="de2-jz-q4m" firstAttribute="top" secondItem="oFw-cg-b62" secondAttribute="bottom" id="fDb-xB-fml"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="comments" id="opB-3R-7Hz"/>
+                    <connections>
+                        <outlet property="imageTarget" destination="oFw-cg-b62" id="0Uk-PT-Hq1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgE-tp-PGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

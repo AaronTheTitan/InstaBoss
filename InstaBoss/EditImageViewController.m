@@ -9,6 +9,8 @@
 #import "EditImageViewController.h"
 
 @interface EditImageViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageTarget;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCaption;
 
 @end
@@ -17,10 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.imageTarget.image = self.snapImage;
 }
 
 - (IBAction)tapButtonSave:(UIButton *)sender {
-    PFObject *photo = [PFObject objectWithClassName:@"Photo"];
+    PFObject *photo = [PFObject objectWithClassName:@"PhotoZ"];
     NSData *imageData = UIImagePNGRepresentation(self.imageTarget.image);
     PFFile *imageFile = [PFFile fileWithName:self.textFieldCaption.text data:imageData];
 

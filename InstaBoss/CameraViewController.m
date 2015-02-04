@@ -44,7 +44,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([@"SaveImageSegue" isEqualToString:segue.identifier]) {
         EditImageViewController *editImage = segue.destinationViewController;
-        editImage.imageTarget = self.viewCamera;
+        editImage.snapImage = self.viewCamera.image;
     }
 }
 

@@ -5,18 +5,48 @@
 //  Created by Aaron Bradley on 2/3/15.
 //  Copyright (c) 2015 Aaron Bradley. All rights reserved.
 //
+#import <Parse/Parse.h>
+
 
 #import "FeedViewController.h"
 
 @interface FeedViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageTarget;
+
 @end
 
 @implementation FeedViewController
-
+{
+    NSMutableArray *parseObjects;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self loadPicture];
+}
+
+- (void)loadPicture {
+    PFQuery *query = [PFQuery queryWithClassName:@"PhotoZ"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSLog(@"async call to Parse...");
+        parseObjects = [NSMutableArray arrayWithArray:objects];
+
+        NSLog(@"%li", parseObjects.count);
+        PFFile *imageFile = [((PFObject *)parseObjects[0]) objectForKey:@"Image"];
+
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!data) {
+                return NSLog(@"%@", error);
+            }
+
+            NSLog(@"Downloading image from Parse...");
+            // Do something with the image
+            self.imageTarget.image = [UIImage imageWithData:data];
+
+        }];
+
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
