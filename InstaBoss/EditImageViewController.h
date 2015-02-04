@@ -12,5 +12,6 @@
 @interface EditImageViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageTarget;
+@property UIImage *imageSnapped;
 
 @end

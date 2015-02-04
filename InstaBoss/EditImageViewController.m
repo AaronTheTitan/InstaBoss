@@ -17,6 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.imageTarget.image = self.imageSnapped;
 }
 
 - (IBAction)tapButtonSave:(UIButton *)sender {
