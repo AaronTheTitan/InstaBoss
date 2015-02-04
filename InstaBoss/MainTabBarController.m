@@ -25,7 +25,6 @@
     self.feed = [self.viewControllers objectAtIndex:0];
     self.camera = [self.viewControllers objectAtIndex:2];
 
-
     self.camera.delegate = self;
 }
 
@@ -33,5 +32,6 @@
     [self.feed loadFeed];
     self.selectedIndex = 0;
 }
+
 
 @end
