@@ -10,8 +10,15 @@
 
 @implementation Photo
 
-- (void)showPhoto {
+- (instancetype)initWithParseObject:(PFObject *)parseObject {
+    self = [super init];
 
+    PFFile *imageFile = [parseObject objectForKey:@"Image"];
+
+    self.caption = [parseObject objectForKey:@"Caption"];
+    self.image = [UIImage imageWithData:[imageFile getData:nil]];
+    
+    return self;
 }
 
 @end

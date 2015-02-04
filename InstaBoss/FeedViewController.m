@@ -7,61 +7,74 @@
 //
 #import <Parse/Parse.h>
 
+#import "Constants.h"
 
 #import "FeedViewController.h"
+#import "CameraViewController.h"
+#import "CommentsViewController.h"
 
-@interface FeedViewController ()
+#import "Photo.h"
+#import "FeedCell.h"
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageTarget;
+@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tablePhotos;
 
 @end
 
 @implementation FeedViewController
 {
-    NSMutableArray *parseObjects;
+    NSMutableArray *photos;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadPicture];
+    [self loadFeed];
 }
 
-- (void)loadPicture {
-    PFQuery *query = [PFQuery queryWithClassName:@"PhotoZ"];
+
+- (void)loadFeed {
+    photos = [NSMutableArray new];
+
+    PFQuery *query = [PFQuery queryWithClassName:kParsePhotoObjectClass];
+
+    dispatch_queue_t feedQueue = dispatch_queue_create("feedQueue",NULL);
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSLog(@"async call to Parse...");
-        parseObjects = [NSMutableArray arrayWithArray:objects];
-
-        NSLog(@"%li", parseObjects.count);
-        PFFile *imageFile = [((PFObject *)parseObjects[0]) objectForKey:@"Image"];
-
-        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            if (!data) {
-                return NSLog(@"%@", error);
+        dispatch_async(feedQueue, ^{
+            for(PFObject *parseObject in objects) {
+                [photos addObject:[[Photo alloc] initWithParseObject:parseObject]];
             }
 
-            NSLog(@"Downloading image from Parse...");
-            // Do something with the image
-            self.imageTarget.image = [UIImage imageWithData:data];
-
-        }];
-
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tablePhotos reloadData];
+            });
+        });
     }];
 
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([@"ViewCommentsSegue" isEqualToString:segue.identifier]) {
+        CommentsViewController *controller = segue.destinationViewController;
+        controller.photo = [photos objectAtIndex:self.tablePhotos.indexPathForSelectedRow.row];
+    }
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return photos.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell" forIndexPath:indexPath];
+
+    Photo *photo = [photos objectAtIndex:indexPath.row];
+    cell.textLabel.text = photo.caption;
+    cell.imageView.image = photo.image;
+    return cell;
+}
+
 
 @end

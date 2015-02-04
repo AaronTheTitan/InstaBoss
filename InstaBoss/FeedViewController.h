@@ -10,4 +10,6 @@
 
 @interface FeedViewController : UIViewController
 
+- (void)loadFeed;
+
 @end

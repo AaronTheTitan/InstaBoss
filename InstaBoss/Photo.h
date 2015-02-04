@@ -12,6 +12,9 @@
 
 @interface Photo : NSObject
 
-@property UIImage *photo;
+@property NSString *caption;
+@property UIImage *image;
+
+- (instancetype)initWithParseObject:(PFObject *)parseObject;
 
 @end

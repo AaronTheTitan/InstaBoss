@@ -10,6 +10,9 @@
 		887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFED1A816502007153E4 /* CameraViewController.m */; };
 		887AEFF31A818626007153E4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF01A818626007153E4 /* Photo.m */; };
 		887AEFF41A818626007153E4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF21A818626007153E4 /* User.m */; };
+		88D085D11A82314500CB4B52 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D01A82314500CB4B52 /* FeedCell.m */; };
+		88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D41A82436F00CB4B52 /* MainTabBarController.m */; };
+		88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D71A824AF300CB4B52 /* CommentsViewController.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -34,7 +37,6 @@
 		914AC20D1A81883100A60F4A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2081A81883100A60F4A /* ParseFacebookUtils.framework */; };
 		914AC20E1A81883100A60F4A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2091A81883100A60F4A /* ParseUI.framework */; };
 		914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914AD60A1A8199F300C9CDE0 /* FeedViewController.m */; };
-		914AD60E1A819A5700C9CDE0 /* EditImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914AD60D1A819A5700C9CDE0 /* EditImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,13 @@
 		887AEFF01A818626007153E4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		887AEFF11A818626007153E4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		887AEFF21A818626007153E4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		88D085CF1A82314500CB4B52 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		88D085D01A82314500CB4B52 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		88D085D21A82355500CB4B52 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		88D085D31A82436F00CB4B52 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		88D085D41A82436F00CB4B52 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		88D085D61A824AF300CB4B52 /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		88D085D71A824AF300CB4B52 /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,8 +94,6 @@
 		914AC2091A81883100A60F4A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
 		914AD6091A8199F300C9CDE0 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		914AD60A1A8199F300C9CDE0 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
-		914AD60C1A819A5700C9CDE0 /* EditImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditImageViewController.h; sourceTree = "<group>"; };
-		914AD60D1A819A5700C9CDE0 /* EditImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +135,6 @@
 			children = (
 				887AEFEC1A816502007153E4 /* CameraViewController.h */,
 				887AEFED1A816502007153E4 /* CameraViewController.m */,
-				914AD60C1A819A5700C9CDE0 /* EditImageViewController.h */,
-				914AD60D1A819A5700C9CDE0 /* EditImageViewController.m */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -143,6 +148,19 @@
 				887AEFF21A818626007153E4 /* User.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		88D085CE1A82312500CB4B52 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				88D085D61A824AF300CB4B52 /* CommentsViewController.h */,
+				88D085D71A824AF300CB4B52 /* CommentsViewController.m */,
+				914AD6091A8199F300C9CDE0 /* FeedViewController.h */,
+				914AD60A1A8199F300C9CDE0 /* FeedViewController.m */,
+				88D085CF1A82314500CB4B52 /* FeedCell.h */,
+				88D085D01A82314500CB4B52 /* FeedCell.m */,
+			);
+			name = Feed;
 			sourceTree = "<group>";
 		};
 		9138C74E1A813EBB0097C0EA = {
@@ -209,6 +227,7 @@
 				9138C75F1A813EBB0097C0EA /* AppDelegate.m */,
 				9138C7671A813EBB0097C0EA /* Images.xcassets */,
 				9138C7691A813EBB0097C0EA /* LaunchScreen.xib */,
+				88D085D21A82355500CB4B52 /* Constants.h */,
 			);
 			name = Defaults;
 			sourceTree = "<group>";
@@ -216,11 +235,12 @@
 		9138C7811A813EE20097C0EA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				887AEFEB1A8164EA007153E4 /* Camera */,
-				914AD6091A8199F300C9CDE0 /* FeedViewController.h */,
-				914AD60A1A8199F300C9CDE0 /* FeedViewController.m */,
 				9138C7611A813EBB0097C0EA /* HomeViewController.h */,
 				9138C7621A813EBB0097C0EA /* HomeViewController.m */,
+				88D085D31A82436F00CB4B52 /* MainTabBarController.h */,
+				88D085D41A82436F00CB4B52 /* MainTabBarController.m */,
+				88D085CE1A82312500CB4B52 /* Feed */,
+				887AEFEB1A8164EA007153E4 /* Camera */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -350,12 +370,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				887AEFF31A818626007153E4 /* Photo.m in Sources */,
+				88D085D11A82314500CB4B52 /* FeedCell.m in Sources */,
+				88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */,
 				887AEFF41A818626007153E4 /* User.m in Sources */,
 				914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
-				914AD60E1A819A5700C9CDE0 /* EditImageViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
+				88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
