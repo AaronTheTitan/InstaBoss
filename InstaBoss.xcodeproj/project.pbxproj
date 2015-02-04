@@ -16,6 +16,7 @@
 		88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D41A82436F00CB4B52 /* MainTabBarController.m */; };
 		88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D71A824AF300CB4B52 /* CommentsViewController.m */; };
 		910088461A82AFBE00BD946A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910088451A82AFBE00BD946A /* SignInViewController.m */; };
+		910088481A82C70400BD946A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910088471A82C70400BD946A /* Bolts.framework */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -34,7 +35,6 @@
 		914AC2001A8187CD00A60F4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC1FF1A8187CD00A60F4A /* SystemConfiguration.framework */; };
 		914AC2021A8187D700A60F4A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2011A8187D700A60F4A /* libz.dylib */; };
 		914AC2041A8187ED00A60F4A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2031A8187ED00A60F4A /* libsqlite3.dylib */; };
-		914AC20A1A81883100A60F4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2051A81883100A60F4A /* Bolts.framework */; };
 		914AC20B1A81883100A60F4A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2061A81883100A60F4A /* Parse.framework */; };
 		914AC20C1A81883100A60F4A /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2071A81883100A60F4A /* ParseCrashReporting.framework */; };
 		914AC20D1A81883100A60F4A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2081A81883100A60F4A /* ParseFacebookUtils.framework */; };
@@ -72,6 +72,7 @@
 		88D085D71A824AF300CB4B52 /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
 		910088441A82AFBE00BD946A /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		910088451A82AFBE00BD946A /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		910088471A82C70400BD946A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		914AC1FF1A8187CD00A60F4A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		914AC2011A8187D700A60F4A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		914AC2031A8187ED00A60F4A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		914AC2051A81883100A60F4A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
 		914AC2061A81883100A60F4A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
 		914AC2071A81883100A60F4A /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../ParseCrashReporting.framework; sourceTree = "<group>"; };
 		914AC2081A81883100A60F4A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -113,7 +113,6 @@
 				914AC2041A8187ED00A60F4A /* libsqlite3.dylib in Frameworks */,
 				914AC2021A8187D700A60F4A /* libz.dylib in Frameworks */,
 				914AC2001A8187CD00A60F4A /* SystemConfiguration.framework in Frameworks */,
-				914AC20A1A81883100A60F4A /* Bolts.framework in Frameworks */,
 				914AC1FE1A8187C100A60F4A /* StoreKit.framework in Frameworks */,
 				914AC20C1A81883100A60F4A /* ParseCrashReporting.framework in Frameworks */,
 				914AC20E1A81883100A60F4A /* ParseUI.framework in Frameworks */,
@@ -126,6 +125,7 @@
 				914AC1F41A81878700A60F4A /* CoreGraphics.framework in Frameworks */,
 				914AC1F21A81877C00A60F4A /* CFNetwork.framework in Frameworks */,
 				914AC1F01A81877300A60F4A /* AudioToolbox.framework in Frameworks */,
+				910088481A82C70400BD946A /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +281,7 @@
 			children = (
 				914AC2031A8187ED00A60F4A /* libsqlite3.dylib */,
 				914AC2011A8187D700A60F4A /* libz.dylib */,
+				910088471A82C70400BD946A /* Bolts.framework */,
 				914AC1FF1A8187CD00A60F4A /* SystemConfiguration.framework */,
 				914AC1FD1A8187C100A60F4A /* StoreKit.framework */,
 				914AC1FB1A8187B700A60F4A /* Security.framework */,
@@ -290,7 +291,6 @@
 				914AC1F31A81878700A60F4A /* CoreGraphics.framework */,
 				914AC1F11A81877C00A60F4A /* CFNetwork.framework */,
 				914AC1EF1A81877300A60F4A /* AudioToolbox.framework */,
-				914AC2051A81883100A60F4A /* Bolts.framework */,
 				914AC2061A81883100A60F4A /* Parse.framework */,
 				914AC2071A81883100A60F4A /* ParseCrashReporting.framework */,
 				914AC2081A81883100A60F4A /* ParseFacebookUtils.framework */,
