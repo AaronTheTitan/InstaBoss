@@ -20,9 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.buttonSavePicture.enabled = NO;
-
-    [self isCameraEnabled];
+    if([self isCameraEnabled]) {
+        [self showSourcePicker:UIImagePickerControllerSourceTypeCamera];
+    }
 }
 
 - (BOOL)isCameraEnabled {
@@ -39,11 +39,6 @@
     [myAlertView show];
 }
 
-- (IBAction)tapButtonTakePicture:(UIButton *)sender {
-    if([self isCameraEnabled]) {
-        [self showSourcePicker:UIImagePickerControllerSourceTypeCamera];
-    }
-}
 
 - (IBAction)tapButtonSelectFromGallery:(UIButton *)sender {
     [self showSourcePicker:UIImagePickerControllerSourceTypePhotoLibrary];
