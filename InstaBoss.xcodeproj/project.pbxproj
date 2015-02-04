@@ -33,6 +33,8 @@
 		914AC20C1A81883100A60F4A /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2071A81883100A60F4A /* ParseCrashReporting.framework */; };
 		914AC20D1A81883100A60F4A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2081A81883100A60F4A /* ParseFacebookUtils.framework */; };
 		914AC20E1A81883100A60F4A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2091A81883100A60F4A /* ParseUI.framework */; };
+		914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914AD60A1A8199F300C9CDE0 /* FeedViewController.m */; };
+		914AD60E1A819A5700C9CDE0 /* EditImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914AD60D1A819A5700C9CDE0 /* EditImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,10 @@
 		914AC2071A81883100A60F4A /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../ParseCrashReporting.framework; sourceTree = "<group>"; };
 		914AC2081A81883100A60F4A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		914AC2091A81883100A60F4A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
+		914AD6091A8199F300C9CDE0 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		914AD60A1A8199F300C9CDE0 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		914AD60C1A819A5700C9CDE0 /* EditImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditImageViewController.h; sourceTree = "<group>"; };
+		914AD60D1A819A5700C9CDE0 /* EditImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,8 @@
 			children = (
 				887AEFEC1A816502007153E4 /* CameraViewController.h */,
 				887AEFED1A816502007153E4 /* CameraViewController.m */,
+				914AD60C1A819A5700C9CDE0 /* EditImageViewController.h */,
+				914AD60D1A819A5700C9CDE0 /* EditImageViewController.m */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -209,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				887AEFEB1A8164EA007153E4 /* Camera */,
+				914AD6091A8199F300C9CDE0 /* FeedViewController.h */,
+				914AD60A1A8199F300C9CDE0 /* FeedViewController.m */,
 				9138C7611A813EBB0097C0EA /* HomeViewController.h */,
 				9138C7621A813EBB0097C0EA /* HomeViewController.m */,
 			);
@@ -340,7 +350,9 @@
 			files = (
 				887AEFF31A818626007153E4 /* Photo.m in Sources */,
 				887AEFF41A818626007153E4 /* User.m in Sources */,
+				914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
+				914AD60E1A819A5700C9CDE0 /* EditImageViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,

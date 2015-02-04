@@ -22,16 +22,7 @@
 //    testObject[@"foo"] = @"bar";
 //    [testObject saveInBackground];
 
-    PFObject *anotherObjectTest = [PFObject objectWithClassName:@"Photo"];
-    [anotherObjectTest setValue:@"anotherPicture" forKey:@"image"];
-    [anotherObjectTest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"it worked");
-        } else {
-            UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, try again :-(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-            [myAlertView show];
-        }
-    }];
+
 
 }
 

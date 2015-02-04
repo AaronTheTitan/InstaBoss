@@ -25,6 +25,7 @@
     [self isCameraEnabled];
 }
 
+
 - (BOOL)isCameraEnabled {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [self noCameraAlert];

@@ -169,18 +169,20 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="Jxk-b6-MhT"/>
+                                        <exclude reference="dgc-Iu-fgM"/>
                                         <exclude reference="fcm-Ng-5in"/>
                                         <exclude reference="g1F-lT-feZ"/>
                                         <exclude reference="Sd3-KZ-ydl"/>
                                         <exclude reference="gqq-r9-1PE"/>
-                                        <exclude reference="Jxk-b6-MhT"/>
-                                        <exclude reference="dgc-Iu-fgM"/>
                                         <exclude reference="Ayq-7z-ww2"/>
                                         <exclude reference="yX6-xD-9cf"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
+                                        <include reference="Jxk-b6-MhT"/>
+                                        <include reference="dgc-Iu-fgM"/>
                                         <exclude reference="Eey-NL-JRg"/>
                                         <include reference="fcm-Ng-5in"/>
                                         <include reference="g1F-lT-feZ"/>
@@ -189,8 +191,6 @@
                                         <include reference="Sd3-KZ-ydl"/>
                                         <include reference="gqq-r9-1PE"/>
                                         <exclude reference="tqd-NM-DSe"/>
-                                        <include reference="Jxk-b6-MhT"/>
-                                        <include reference="dgc-Iu-fgM"/>
                                         <include reference="Ayq-7z-ww2"/>
                                         <exclude reference="cMY-MF-x3U"/>
                                         <exclude reference="qMl-zA-4Di"/>
