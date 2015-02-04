@@ -7,6 +7,7 @@
 //
 
 #import "CameraViewController.h"
+#import "EditImageViewController.h"
 
 @interface CameraViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -40,6 +41,12 @@
     [myAlertView show];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([@"SaveImageSegue" isEqualToString:segue.identifier]) {
+        EditImageViewController *editImage = segue.destinationViewController;
+        editImage.imageTarget = self.viewCamera;
+    }
+}
 
 - (IBAction)tapButtonSelectFromGallery:(UIButton *)sender {
     [self showSourcePicker:UIImagePickerControllerSourceTypePhotoLibrary];

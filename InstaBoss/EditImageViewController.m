@@ -9,8 +9,7 @@
 #import "EditImageViewController.h"
 
 @interface EditImageViewController ()
-
-
+@property (weak, nonatomic) IBOutlet UITextField *textFieldCaption;
 
 @end
 
@@ -18,21 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
 
-    PFObject *anotherObjectTest = [PFObject objectWithClassName:@"Photo"];
-    [anotherObjectTest setValue:@"anotherPicture" forKey:@"image"];
-    [anotherObjectTest saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"it worked");
-        } else {
-            UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, try again :-(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+- (IBAction)tapButtonSave:(UIButton *)sender {
+    PFObject *photo = [PFObject objectWithClassName:@"Photo"];
+    NSData *imageData = UIImagePNGRepresentation(self.imageTarget.image);
+    PFFile *imageFile = [PFFile fileWithName:self.textFieldCaption.text data:imageData];
+
+    [photo setObject:self.textFieldCaption.text forKey:@"Caption"];
+    [photo setObject:imageFile forKey:@"Image"];
+
+    [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded) {
+            NSLog(@"SAVE SUCCEEDED == %i", succeeded);
+        } else if(error) {
+            UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, try again :(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [myAlertView show];
         }
     }];
 }
 
-- (void)tapButtonSaveImage {
-    
+- (IBAction)tapButtonCancel:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 @end
