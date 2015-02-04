@@ -9,6 +9,6 @@
 #ifndef InstaBoss_Constants_h
 #define InstaBoss_Constants_h
 
-#define kParsePhotoObjectClass @"PhotoY"
+#define kParsePhotoObjectClass @"PhotoX"
 
 #endif

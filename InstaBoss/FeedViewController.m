@@ -43,15 +43,14 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         dispatch_async(feedQueue, ^{
             for(PFObject *parseObject in objects) {
-                [photos addObject:[[Photo alloc] initWithParseObject:parseObject]];
+                [photos addObject:[[Photo alloc] initWithParse:parseObject]];
             }
-
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tablePhotos reloadData];
             });
         });
     }];
-
 
 }
 

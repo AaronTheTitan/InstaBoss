@@ -12,6 +12,18 @@
 
 @implementation BossObject
 
++ (NSArray *)convertArray:(NSMutableArray *)input {
+
+    NSMutableArray *array = [NSMutableArray new];
+
+    for(int i = 0 ; i < input.count ; i++) {
+        [array addObject:input[i]];
+    }
+
+    return [[NSArray alloc] initWithArray:array];
+    
+}
+
 + (NSString *)generateTimeStamp {
     return [[NSDate date] description];
 }
