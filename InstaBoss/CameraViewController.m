@@ -86,17 +86,6 @@
     [myAlertView show];
 }
 
-<<<<<<< HEAD
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([@"SaveImageSegue" isEqualToString:segue.identifier]) {
-
-        EditImageViewController *editImage = segue.destinationViewController;
-        editImage.imageSnapped = self.viewCamera.image;
-
-    }
-}
-=======
->>>>>>> 28d3b332492c7c442e80d951c01e86dd5dab79f2
 
 - (IBAction)tapButtonSelectFromGallery:(UIButton *)sender {
     [self showSourcePicker:UIImagePickerControllerSourceTypePhotoLibrary];
@@ -120,9 +109,9 @@
     picker.allowsEditing = YES;
     picker.sourceType = source;
     [self presentViewController:picker animated:YES completion:^{
-
+        
     }];
-
+    
 }
 
 
