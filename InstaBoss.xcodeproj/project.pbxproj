@@ -11,6 +11,7 @@
 		887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFED1A816502007153E4 /* CameraViewController.m */; };
 		887AEFF31A818626007153E4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF01A818626007153E4 /* Photo.m */; };
 		887AEFF41A818626007153E4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 887AEFF21A818626007153E4 /* User.m */; };
+		88B1320A1A82B06700F04C2A /* BossObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B132091A82B06700F04C2A /* BossObject.m */; };
 		88D085D11A82314500CB4B52 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D01A82314500CB4B52 /* FeedCell.m */; };
 		88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D41A82436F00CB4B52 /* MainTabBarController.m */; };
 		88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D71A824AF300CB4B52 /* CommentsViewController.m */; };
@@ -59,6 +60,8 @@
 		887AEFF01A818626007153E4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		887AEFF11A818626007153E4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		887AEFF21A818626007153E4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		88B132081A82B06700F04C2A /* BossObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossObject.h; sourceTree = "<group>"; };
+		88B132091A82B06700F04C2A /* BossObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossObject.m; sourceTree = "<group>"; };
 		88D085CF1A82314500CB4B52 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
 		88D085D01A82314500CB4B52 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		88D085D21A82355500CB4B52 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				887AEFF01A818626007153E4 /* Photo.m */,
 				887AEFF11A818626007153E4 /* User.h */,
 				887AEFF21A818626007153E4 /* User.m */,
+				88B132081A82B06700F04C2A /* BossObject.h */,
+				88B132091A82B06700F04C2A /* BossObject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */,
 				887AEFF41A818626007153E4 /* User.m in Sources */,
 				914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */,
+				88B1320A1A82B06700F04C2A /* BossObject.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,

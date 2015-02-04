@@ -17,7 +17,10 @@
 
     self.caption = [parseObject objectForKey:@"Caption"];
     self.image = [UIImage imageWithData:[imageFile getData:nil]];
+
     
+
+
     return self;
 }
 
