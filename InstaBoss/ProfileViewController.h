@@ -11,4 +11,6 @@
 
 @interface ProfileViewController : UIViewController
 
+@property PFUser *user;
+
 @end
