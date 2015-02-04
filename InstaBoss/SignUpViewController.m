@@ -10,10 +10,10 @@
 
 @interface SignUpViewController ()
 {
-IBOutlet UITextField *textFieldEmailAddress;
-IBOutlet UITextField *textFieldUsername;
-IBOutlet UITextField *textFieldPassword;
-IBOutlet UITextField *textFieldPasswordReEnter;
+    IBOutlet UITextField *textFieldUsername;
+    IBOutlet UITextField *textFieldPassword;
+    IBOutlet UITextField *textFieldPasswordConfirm;
+    IBOutlet UITextField *textFieldEmailAddress;
 }
 @end
 
@@ -21,6 +21,11 @@ IBOutlet UITextField *textFieldPasswordReEnter;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    PFUser *user = [PFUser currentUser];
+    if (user.username != nil) {
+        [self performSegueWithIdentifier:@"login" sender:self];
+    }
 
 }
 
@@ -30,7 +35,7 @@ IBOutlet UITextField *textFieldPasswordReEnter;
 
 - (void)checkFieldsForCompletion {
 
-    if ([textFieldUsername.text isEqualToString:@""] || [textFieldEmailAddress.text isEqualToString:@""] || [textFieldPassword.text isEqualToString:@""] || [textFieldPasswordReEnter.text isEqualToString:@""]) {
+    if ([textFieldUsername.text isEqualToString:@""] || [textFieldEmailAddress.text isEqualToString:@""] || [textFieldPassword.text isEqualToString:@""] || [textFieldPasswordConfirm.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Aw Schnaps!" message:@"Make sure you complete all fields and try again :(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     } else {
@@ -40,7 +45,7 @@ IBOutlet UITextField *textFieldPasswordReEnter;
 
 - (void)checkFieldsForMatch {
 
-    if (![textFieldPassword.text isEqualToString:textFieldPasswordReEnter.text]) {
+    if (![textFieldPassword.text isEqualToString:textFieldPasswordConfirm.text]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Aw Schnaps!" message:@"Passwords don't match!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     } else {

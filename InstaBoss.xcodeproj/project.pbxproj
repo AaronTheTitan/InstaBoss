@@ -14,6 +14,7 @@
 		88D085D11A82314500CB4B52 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D01A82314500CB4B52 /* FeedCell.m */; };
 		88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D41A82436F00CB4B52 /* MainTabBarController.m */; };
 		88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D71A824AF300CB4B52 /* CommentsViewController.m */; };
+		910088461A82AFBE00BD946A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910088451A82AFBE00BD946A /* SignInViewController.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -66,6 +67,8 @@
 		88D085D41A82436F00CB4B52 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		88D085D61A824AF300CB4B52 /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
 		88D085D71A824AF300CB4B52 /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
+		910088441A82AFBE00BD946A /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		910088451A82AFBE00BD946A /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				883CB8F91A8297830041559A /* SignUpViewController.h */,
 				883CB8FA1A8297830041559A /* SignUpViewController.m */,
+				910088441A82AFBE00BD946A /* SignInViewController.h */,
+				910088451A82AFBE00BD946A /* SignInViewController.m */,
 			);
 			name = "Profile Controller";
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				88D085D11A82314500CB4B52 /* FeedCell.m in Sources */,
 				88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */,
 				887AEFF41A818626007153E4 /* User.m in Sources */,
+				910088461A82AFBE00BD946A /* SignInViewController.m in Sources */,
 				914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
