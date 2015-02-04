@@ -17,6 +17,7 @@
 		88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D085D71A824AF300CB4B52 /* CommentsViewController.m */; };
 		910088461A82AFBE00BD946A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910088451A82AFBE00BD946A /* SignInViewController.m */; };
 		910088481A82C70400BD946A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910088471A82C70400BD946A /* Bolts.framework */; };
+		9100884B1A82C91500BD946A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100884A1A82C91500BD946A /* ProfileViewController.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -73,6 +74,8 @@
 		910088441A82AFBE00BD946A /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		910088451A82AFBE00BD946A /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		910088471A82C70400BD946A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		910088491A82C91500BD946A /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		9100884A1A82C91500BD946A /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				883CB8FA1A8297830041559A /* SignUpViewController.m */,
 				910088441A82AFBE00BD946A /* SignInViewController.h */,
 				910088451A82AFBE00BD946A /* SignInViewController.m */,
+				910088491A82C91500BD946A /* ProfileViewController.h */,
+				9100884A1A82C91500BD946A /* ProfileViewController.m */,
 			);
 			name = "Profile Controller";
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */,
 				883CB8FB1A8297830041559A /* SignUpViewController.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,
+				9100884B1A82C91500BD946A /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
