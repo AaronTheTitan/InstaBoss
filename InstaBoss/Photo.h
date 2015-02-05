@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface Photo : NSObject
 
@@ -20,6 +21,11 @@
 @property NSString *photoId;
 
 @property UIImage *image;
+
+@property NSNumber *latitude;
+@property NSNumber *longitude;
+
+@property MKPointAnnotation *currentLocation;
 
 - (instancetype)initPhoto;
 - (instancetype)initWithParse:(PFObject *)parse;

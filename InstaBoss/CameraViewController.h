@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
 #import "Photo.h"
 
 @protocol CameraViewControllerDelegate <NSObject>
 
 - (void)updateWithNewPhoto:(Photo *)photo;
+- (MKPointAnnotation *)getLocation;
 
 @end
 

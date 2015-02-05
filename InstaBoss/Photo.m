@@ -43,8 +43,16 @@
 
     self.photoId = parse[@"PhotoId"];
 
+    self.latitude = parse[@"Latitude"];
+    self.longitude = parse[@"Longitude"];
+
+    self.currentLocation = [[MKPointAnnotation alloc] init];
+    self.currentLocation.title = @"Current Location";
+    self.currentLocation.coordinate = CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+
     self.image = [UIImage imageWithData:[parse[@"Image"] getData:nil]];
 
+    
     return self;
 }
 
@@ -61,6 +69,9 @@
 
     self.photoId = [BossObject generateID:self.caption];
 
+    self.latitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.latitude];
+    self.longitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.longitude];
+
     if(self.image) {
         NSData *imageData = UIImagePNGRepresentation(self.image);
         parse[@"Image"] = [PFFile fileWithName:[BossObject generateID] data:imageData];
@@ -71,6 +82,8 @@
     parse[@"Comments"] = self.comments;
     parse[@"LikeCount"] = self.likeCount;
     parse[@"PhotoId"] = self.photoId;
+    parse[@"Latitude"] = self.latitude;
+    parse[@"Longitude"] = self.longitude;
 
 
     [parse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
