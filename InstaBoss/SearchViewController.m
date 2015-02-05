@@ -48,7 +48,6 @@
             for(PFObject *object in objects) {
                 HashTag *hashTag = [[HashTag alloc] initWithParse:object];
                 [results addObject:hashTag];
-                NSLog(@"%@", hashTag.tag);
             }
             searchResults = [NSArray arrayWithArray:results];
         }
@@ -75,16 +74,11 @@
 
     for(HashTag *hashTag in searchResults) {
             if([hashTag isMatch:searchText]) {
-
                 [filter addObject:hashTag];
-
-                NSLog(@"%@", filter);
             }
         }
 
     [tableViewSearch reloadData];
-
-
 }
 
 

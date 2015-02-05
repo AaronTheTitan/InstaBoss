@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Aaron Bradley. All rights reserved.
 //
 
+
 #import "Constants.h"
 #import "Photo.h"
 #import "BossObject.h"
@@ -13,6 +14,7 @@
 
 @interface Photo ()
 
+@property PFObject *parseObject;
 
 @end
 
@@ -20,7 +22,7 @@
 
 - (instancetype)initPhoto {
     self = [super init];
-    self.userId = @"";
+    self.userId = [PFUser currentUser].username;
     self.caption = @"";
     self.comments = [NSMutableArray new];
     self.likeCount = @0;
@@ -29,6 +31,8 @@
 
 - (instancetype)initWithParse:(PFObject *)parse {
     self = [super init];
+
+    self.parseObject = parse;
 
     self.parseObjectId = parse.objectId;
 
@@ -45,9 +49,15 @@
     return self;
 }
 
+- (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod {
+    self.comments = [NSMutableArray arrayWithArray:[[self.comments reverseObjectEnumerator] allObjects]];
+    self.parseObject[@"Comments"] = self.comments;
+    [self.parseObject saveInBackgroundWithBlock:nil];
+}
+
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod {
     PFObject *parse = [PFObject objectWithClassName:kParsePhotoObjectClass];
-    self.comments = [NSMutableArray arrayWithArray:[[self.comments reverseObjectEnumerator] allObjects]];
+
 
     self.photoId = [BossObject generateID:self.caption];
 
