@@ -20,12 +20,21 @@
     IBOutlet UILabel *userURL;
 
     BOOL isEditing;
+
+    IBOutlet UILabel *labelChangePassword;
+    IBOutlet UITextField *textFieldChangeEmail;
+    IBOutlet UITextField *textFieldCurrentPassword;
+    IBOutlet UITextField *textFieldNewPassword;
+    IBOutlet UITextField *textFieldConfirmNewPassword;
 }
+
+//@property PFUser *user;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewProfile;
 @property (strong, nonatomic) IBOutlet UILabel *numberFollowing;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfFollowers;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfPosts;
+
 
 @end
 
@@ -40,6 +49,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self hideEditFields];
+    PFUser *user = [PFUser currentUser];
+
+    userDisplayName.text = user.username;
+    userProfileDescription.text = user.description;
+
 }
 
 - (void)hideEditFields {
@@ -56,6 +70,18 @@
     userDisplayName.alpha = 1;
     userProfileDescription.alpha = 1;
     userURL.alpha = 1;
+
+    textFieldChangeEmail.enabled = NO;
+    textFieldCurrentPassword.enabled = NO;
+    textFieldNewPassword.enabled = NO;
+    textFieldConfirmNewPassword.enabled = NO;
+
+    textFieldChangeEmail.alpha = 0;
+    textFieldCurrentPassword.alpha = 0;
+    textFieldNewPassword.alpha = 0;
+    textFieldConfirmNewPassword.alpha = 0;
+    labelChangePassword.alpha = 0;
+    
 }
 
 - (void)showEditFields {
@@ -76,6 +102,17 @@
     userDisplayName.alpha = 0;
     userProfileDescription.alpha = 0;
     userURL.alpha = 0;
+
+    textFieldChangeEmail.enabled = YES;
+    textFieldCurrentPassword.enabled = YES;
+    textFieldNewPassword.enabled = YES;
+    textFieldConfirmNewPassword.enabled = YES;
+
+    textFieldChangeEmail.alpha = 1;
+    textFieldCurrentPassword.alpha = 1;
+    textFieldNewPassword.alpha = 1;
+    textFieldConfirmNewPassword.alpha = 1;
+    labelChangePassword.alpha = 1;
 }
 
 - (IBAction)tapButtonEditProfile:(UIButton *)sender {
@@ -98,6 +135,11 @@
 
         [self hideEditFields];
         [buttonEditProfile setTitle:@"Edit Your Profile" forState:UIControlStateNormal];
+
+//        user.username = textFieldDisplayName.text;
+//        user.description = textFieldProfileDescription.text;
+        userURL.text = textFieldURL.text;
+
     }
 }
 
