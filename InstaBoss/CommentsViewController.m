@@ -36,7 +36,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if(textField.text.length > 0) {
         [self.photo.comments addObject:textField.text];
-        [self.photo persist:^(BOOL succeeded, NSError *error) {
+        [self.photo saveComments:^(BOOL succeeded, NSError *error) {
             if(succeeded) {
                 [HashTag persistHashTags:textField.text withObjectId:self.photo.photoId];
             }

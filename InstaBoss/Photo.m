@@ -14,6 +14,7 @@
 
 @interface Photo ()
 
+@property PFObject *parseObject;
 
 @end
 
@@ -31,6 +32,8 @@
 - (instancetype)initWithParse:(PFObject *)parse {
     self = [super init];
 
+    self.parseObject = parse;
+
     self.parseObjectId = parse.objectId;
 
 
@@ -46,9 +49,15 @@
     return self;
 }
 
+- (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod {
+    self.comments = [NSMutableArray arrayWithArray:[[self.comments reverseObjectEnumerator] allObjects]];
+    self.parseObject[@"Comments"] = self.comments;
+    [self.parseObject saveInBackgroundWithBlock:nil];
+}
+
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod {
     PFObject *parse = [PFObject objectWithClassName:kParsePhotoObjectClass];
-    self.comments = [NSMutableArray arrayWithArray:[[self.comments reverseObjectEnumerator] allObjects]];
+
 
     self.photoId = [BossObject generateID:self.caption];
 

@@ -24,6 +24,6 @@
 - (instancetype)initPhoto;
 - (instancetype)initWithParse:(PFObject *)parse;
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod;
-
+- (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod;
 
 @end
