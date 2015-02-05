@@ -78,5 +78,17 @@
     return cell;
 }
 
+- (void) likeImage {
+    [object addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            NSLog(@"liked picture!");
+            [self likedSuccess];
+        }
+        else {
+            [self likedFail];
+        }
+    }];
+}
 
 @end

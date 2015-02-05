@@ -198,6 +198,8 @@
                                         <exclude reference="vOI-ah-sqS"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="DtF-S3-bM1"/>
+                                        <exclude reference="vK3-XR-TIG"/>
                                         <exclude reference="K7U-ek-4dA"/>
                                         <exclude reference="c2I-IU-tAn"/>
                                         <exclude reference="sVx-fJ-R3s"/>
@@ -207,8 +209,6 @@
                                         <exclude reference="MTB-aL-s1z"/>
                                         <exclude reference="dgc-Iu-fgM"/>
                                         <exclude reference="gMn-kE-ifT"/>
-                                        <exclude reference="DtF-S3-bM1"/>
-                                        <exclude reference="vK3-XR-TIG"/>
                                         <exclude reference="I1Z-xk-6uh"/>
                                         <exclude reference="dIe-Ka-Bnw"/>
                                         <exclude reference="6aF-RC-jHr"/>
@@ -226,6 +226,8 @@
                                         <include reference="vOI-ah-sqS"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="DtF-S3-bM1"/>
+                                        <include reference="vK3-XR-TIG"/>
                                         <include reference="K7U-ek-4dA"/>
                                         <include reference="c2I-IU-tAn"/>
                                         <include reference="sVx-fJ-R3s"/>
@@ -235,8 +237,6 @@
                                         <include reference="MTB-aL-s1z"/>
                                         <include reference="gMn-kE-ifT"/>
                                         <exclude reference="s8B-Qh-Ess"/>
-                                        <include reference="DtF-S3-bM1"/>
-                                        <include reference="vK3-XR-TIG"/>
                                         <exclude reference="BQ3-yT-y0t"/>
                                         <include reference="I1Z-xk-6uh"/>
                                         <include reference="dIe-Ka-Bnw"/>
@@ -365,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgE-tp-PGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1692" y="1094"/>
+            <point key="canvasLocation" x="-1692" y="1113"/>
         </scene>
         <!--Comments View Controller-->
         <scene sceneID="aiI-ZR-uRU">
@@ -912,25 +912,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-5h-vDv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-5h-vDv">
                                 <rect key="frame" x="0.0" y="-5" width="600" height="605"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvd-ov-38y">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvd-ov-38y">
                                         <rect key="frame" x="135" y="227" width="358" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LWf-F7-sst">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LWf-F7-sst">
                                         <rect key="frame" x="135" y="265" width="358" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PEG-Sz-Iyw">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PEG-Sz-Iyw">
                                         <rect key="frame" x="135" y="303" width="358" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-mE-IFS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-mE-IFS">
                                         <rect key="frame" x="464" y="106" width="44" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="AsG-lm-pNH"/>
@@ -950,7 +950,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSI-Ck-5CL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSI-Ck-5CL">
                                         <rect key="frame" x="464" y="129" width="44" height="21"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" white="0.53820946810000003" alpha="1" colorSpace="calibratedWhite"/>
@@ -959,13 +959,13 @@
                                             <rect key="frame" x="328" y="128" width="44" height="21"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBU-hR-mHo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBU-hR-mHo">
                                         <rect key="frame" x="380" y="108" width="44" height="21"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5g-G9-eur">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5g-G9-eur">
                                         <rect key="frame" x="367" y="129" width="70" height="23"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" white="0.53820946810000003" alpha="1" colorSpace="calibratedWhite"/>
@@ -974,7 +974,7 @@
                                             <rect key="frame" x="237" y="128" width="70" height="23"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-HR-JaY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-HR-JaY">
                                         <rect key="frame" x="290" y="108" width="44" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Gxs-Av-gga"/>
@@ -993,13 +993,13 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnu-QT-j8Y">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnu-QT-j8Y">
                                         <rect key="frame" x="277" y="129" width="71" height="23"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" white="0.53820946810000003" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's Display Name " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Til-V8-S7w">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User's Display Name " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Til-V8-S7w">
                                         <rect key="frame" x="141" y="232" width="227" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="SrW-n4-ojw"/>
@@ -1021,7 +1021,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User profile description goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxC-sR-892">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User profile description goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxC-sR-892">
                                         <rect key="frame" x="141" y="269" width="339" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="RkN-ek-R9J"/>
@@ -1041,7 +1041,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserURL.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF7-5z-rc9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="UserURL.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF7-5z-rc9">
                                         <rect key="frame" x="141" y="307" width="227" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="sQz-aC-vvr"/>
@@ -1060,7 +1060,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-An-VDZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="profilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-An-VDZ">
                                         <rect key="frame" x="126" y="83" width="130" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="iwL-g9-DRt"/>
@@ -1079,7 +1079,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UX-Se-sU9">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UX-Se-sU9">
                                         <rect key="frame" x="298" y="160" width="182" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1165,11 +1165,6 @@
                                     <mask key="constraints">
                                         <exclude reference="9t0-ZQ-oge"/>
                                         <exclude reference="FPb-d3-CqC"/>
-                                        <exclude reference="g2T-DG-8YF"/>
-                                        <exclude reference="hYi-Es-Nie"/>
-                                        <exclude reference="de1-Yf-spp"/>
-                                        <exclude reference="fg1-4m-7HC"/>
-                                        <exclude reference="zRD-aJ-95Y"/>
                                         <exclude reference="GWS-fe-ygF"/>
                                         <exclude reference="KKs-AR-X7d"/>
                                         <exclude reference="LeJ-Rb-7Sf"/>
@@ -1178,25 +1173,30 @@
                                         <exclude reference="w38-Yu-47e"/>
                                         <exclude reference="ypD-gs-KnG"/>
                                         <exclude reference="D6u-nU-KnW"/>
-                                        <exclude reference="FsC-Nr-Pbj"/>
-                                        <exclude reference="dB9-TF-46T"/>
-                                        <exclude reference="m1h-7A-R9v"/>
                                         <exclude reference="4HD-EB-3Ms"/>
                                         <exclude reference="Ldb-QD-cZd"/>
                                         <exclude reference="kaz-Cx-nIS"/>
                                         <exclude reference="9Bv-me-uus"/>
                                         <exclude reference="pX6-SY-fyq"/>
                                         <exclude reference="wZe-wt-bmj"/>
+                                        <exclude reference="de1-Yf-spp"/>
+                                        <exclude reference="fg1-4m-7HC"/>
+                                        <exclude reference="zRD-aJ-95Y"/>
+                                        <exclude reference="g2T-DG-8YF"/>
+                                        <exclude reference="hYi-Es-Nie"/>
+                                        <exclude reference="G4q-hx-FA8"/>
+                                        <exclude reference="R8j-XW-bC1"/>
+                                        <exclude reference="1Fr-1O-HVp"/>
+                                        <exclude reference="6li-d8-LwU"/>
+                                        <exclude reference="FsC-Nr-Pbj"/>
+                                        <exclude reference="dB9-TF-46T"/>
+                                        <exclude reference="m1h-7A-R9v"/>
                                         <exclude reference="I1y-Re-JcG"/>
                                         <exclude reference="nQN-dr-HUB"/>
                                         <exclude reference="u6s-eU-gCm"/>
                                         <exclude reference="9nq-uc-Dif"/>
                                         <exclude reference="SpJ-Sc-hrc"/>
                                         <exclude reference="VG9-s0-mnZ"/>
-                                        <exclude reference="G4q-hx-FA8"/>
-                                        <exclude reference="R8j-XW-bC1"/>
-                                        <exclude reference="1Fr-1O-HVp"/>
-                                        <exclude reference="6li-d8-LwU"/>
                                         <exclude reference="ObS-wF-5xe"/>
                                         <exclude reference="PE8-ox-32E"/>
                                         <exclude reference="LyF-t9-u0M"/>
@@ -1208,11 +1208,6 @@
                                     <mask key="constraints">
                                         <include reference="9t0-ZQ-oge"/>
                                         <include reference="FPb-d3-CqC"/>
-                                        <include reference="g2T-DG-8YF"/>
-                                        <include reference="hYi-Es-Nie"/>
-                                        <include reference="de1-Yf-spp"/>
-                                        <include reference="fg1-4m-7HC"/>
-                                        <include reference="zRD-aJ-95Y"/>
                                         <include reference="GWS-fe-ygF"/>
                                         <include reference="KKs-AR-X7d"/>
                                         <include reference="LeJ-Rb-7Sf"/>
@@ -1221,25 +1216,30 @@
                                         <include reference="w38-Yu-47e"/>
                                         <include reference="ypD-gs-KnG"/>
                                         <include reference="D6u-nU-KnW"/>
-                                        <include reference="FsC-Nr-Pbj"/>
-                                        <include reference="dB9-TF-46T"/>
-                                        <include reference="m1h-7A-R9v"/>
                                         <include reference="4HD-EB-3Ms"/>
                                         <include reference="Ldb-QD-cZd"/>
                                         <include reference="kaz-Cx-nIS"/>
                                         <include reference="9Bv-me-uus"/>
                                         <include reference="pX6-SY-fyq"/>
                                         <include reference="wZe-wt-bmj"/>
+                                        <include reference="de1-Yf-spp"/>
+                                        <include reference="fg1-4m-7HC"/>
+                                        <include reference="zRD-aJ-95Y"/>
+                                        <include reference="g2T-DG-8YF"/>
+                                        <include reference="hYi-Es-Nie"/>
+                                        <include reference="G4q-hx-FA8"/>
+                                        <include reference="R8j-XW-bC1"/>
+                                        <include reference="1Fr-1O-HVp"/>
+                                        <include reference="6li-d8-LwU"/>
+                                        <include reference="FsC-Nr-Pbj"/>
+                                        <include reference="dB9-TF-46T"/>
+                                        <include reference="m1h-7A-R9v"/>
                                         <include reference="I1y-Re-JcG"/>
                                         <include reference="nQN-dr-HUB"/>
                                         <include reference="u6s-eU-gCm"/>
                                         <include reference="9nq-uc-Dif"/>
                                         <include reference="SpJ-Sc-hrc"/>
                                         <include reference="VG9-s0-mnZ"/>
-                                        <include reference="G4q-hx-FA8"/>
-                                        <include reference="R8j-XW-bC1"/>
-                                        <include reference="1Fr-1O-HVp"/>
-                                        <include reference="6li-d8-LwU"/>
                                         <include reference="ObS-wF-5xe"/>
                                         <include reference="PE8-ox-32E"/>
                                         <include reference="LyF-t9-u0M"/>
@@ -1280,7 +1280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohp-5x-2Y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2001" y="1113"/>
+            <point key="canvasLocation" x="1945.5" y="1113"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E1V-La-E6C">
@@ -1326,6 +1326,7 @@
         <image name="comments" width="32" height="32"/>
         <image name="friends" width="32" height="32"/>
         <image name="gallery" width="64" height="64"/>
+        <image name="profilePlaceholder" width="135" height="135"/>
         <image name="search" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
     </resources>
