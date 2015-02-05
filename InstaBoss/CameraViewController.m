@@ -48,17 +48,10 @@
 }
 
 - (void)saveImage:(NSString *)name {
-    Photo *photo = [[Photo alloc] init];
+    Photo *photo = [[Photo alloc] initPhoto];
     photo.caption = name;
     photo.image = self.imageTarget.image;
-    PFObject *parsePhoto = [PFObject objectWithClassName:kParsePhotoObjectClass];
-    NSData *imageData = UIImagePNGRepresentation(self.imageTarget.image);
-    PFFile *imageFile = [PFFile fileWithName:name data:imageData];
-
-    [parsePhoto setObject:self.textFieldCaption.text forKey:@"Caption"];
-    [parsePhoto setObject:imageFile forKey:@"Image"];
-
-    [parsePhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [photo persist:^(BOOL succeeded, NSError *error) {
         if(succeeded) {
         } else if(error) {
             UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, try again :(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -68,7 +61,6 @@
         self.imageTarget.image = nil;
 
         [self.delegate updateWithNewPhoto:photo];
-
     }];
 }
 

@@ -14,15 +14,15 @@
 @property NSString *userId;
 @property NSString *photoId;
 @property NSString *caption;
-@property NSArray *comments;
-@property NSArray *hashTags;
+@property NSMutableArray *comments;
+@property NSMutableArray *hashTags;
 @property NSNumber *likeCount;
 
 @property UIImage *image;
 
 - (instancetype)initPhoto;
 - (instancetype)initWithParse:(PFObject *)parse;
-- (void) saveToParse:(void (^)(BOOL succeeded, NSError *error))completionMethod;
+- (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod;
 
 
 @end

@@ -12,7 +12,7 @@
 
 @implementation BossObject
 
-+ (NSArray *)convertArray:(NSMutableArray *)input {
++ (NSMutableArray *)convertArray:(NSMutableArray *)input {
 
     NSMutableArray *array = [NSMutableArray new];
 
@@ -20,7 +20,7 @@
         [array addObject:input[i]];
     }
 
-    return [[NSArray alloc] initWithArray:array];
+    return array;
     
 }
 
