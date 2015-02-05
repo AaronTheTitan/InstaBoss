@@ -12,7 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imagePhoto;
 @property (weak, nonatomic) IBOutlet UITableView *tableComments;
-
 @property (strong, nonatomic) IBOutlet UITextField *textFieldEnterComment;
 
 @end

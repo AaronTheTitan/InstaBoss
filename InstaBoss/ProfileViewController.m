@@ -136,7 +136,8 @@
         [self hideEditFields];
         [buttonEditProfile setTitle:@"Edit Your Profile" forState:UIControlStateNormal];
 
-//        user.username = textFieldDisplayName.text;
+        PFUser *user = [PFUser currentUser];
+        user.username = textFieldDisplayName.text;
 //        user.description = textFieldProfileDescription.text;
         userURL.text = textFieldURL.text;
 
