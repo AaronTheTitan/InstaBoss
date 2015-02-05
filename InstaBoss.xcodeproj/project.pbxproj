@@ -19,6 +19,7 @@
 		910088461A82AFBE00BD946A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910088451A82AFBE00BD946A /* SignInViewController.m */; };
 		910088481A82C70400BD946A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910088471A82C70400BD946A /* Bolts.framework */; };
 		9100884B1A82C91500BD946A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100884A1A82C91500BD946A /* ProfileViewController.m */; };
+		91230D331A83EAF3008CC500 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91230D321A83EAF3008CC500 /* SearchViewController.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -79,6 +80,8 @@
 		910088471A82C70400BD946A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		910088491A82C91500BD946A /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		9100884A1A82C91500BD946A /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		91230D311A83EAF3008CC500 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = InstaBoss/SearchViewController.h; sourceTree = "<group>"; };
+		91230D321A83EAF3008CC500 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = InstaBoss/SearchViewController.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -206,6 +209,16 @@
 			name = "Feed Controller";
 			sourceTree = "<group>";
 		};
+		91230D341A83EB01008CC500 /* Search Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91230D311A83EAF3008CC500 /* SearchViewController.h */,
+				91230D321A83EAF3008CC500 /* SearchViewController.m */,
+			);
+			name = "Search Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		9138C74E1A813EBB0097C0EA = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		9138C7811A813EE20097C0EA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				91230D341A83EB01008CC500 /* Search Controller */,
 				883CB8FC1A8297AB0041559A /* Main Controllers */,
 				88D085CE1A82312500CB4B52 /* Feed Controller */,
 				887AEFEB1A8164EA007153E4 /* Camera Controller */,
@@ -417,6 +431,7 @@
 				887AEFF41A818626007153E4 /* User.m in Sources */,
 				910088461A82AFBE00BD946A /* SignInViewController.m in Sources */,
 				914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */,
+				91230D331A83EAF3008CC500 /* SearchViewController.m in Sources */,
 				88B1320A1A82B06700F04C2A /* BossObject.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,

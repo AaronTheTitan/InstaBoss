@@ -134,6 +134,7 @@
         isEditing = NO;
 
         [self hideEditFields];
+        buttonEditProfile.backgroundColor = [UIColor blueColor];
         [buttonEditProfile setTitle:@"Edit Your Profile" forState:UIControlStateNormal];
 
         PFUser *user = [PFUser currentUser];
