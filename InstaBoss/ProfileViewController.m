@@ -26,6 +26,9 @@
     IBOutlet UITextField *textFieldCurrentPassword;
     IBOutlet UITextField *textFieldNewPassword;
     IBOutlet UITextField *textFieldConfirmNewPassword;
+
+    PFUser *currentUser;
+
 }
 
 //@property PFUser *user;
@@ -35,6 +38,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *numberOfFollowers;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfPosts;
 
+//@property PFUser *currentUser;
 
 @end
 
@@ -49,10 +53,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self hideEditFields];
-    PFUser *user = [PFUser currentUser];
 
-    userDisplayName.text = user.username;
-    userProfileDescription.text = user[@"userDescription"];
+    currentUser = [PFUser currentUser];
+    userDisplayName.text = currentUser.username;
+    userProfileDescription.text = currentUser[@"userDescription"];
+    userURL.text = currentUser[@"url"];
 
 }
 
@@ -134,22 +139,28 @@
         isEditing = NO;
 
         [self hideEditFields];
-        buttonEditProfile.backgroundColor = [UIColor blueColor];
-        [buttonEditProfile setTitle:@"Edit Your Profile" forState:UIControlStateNormal];
 
-        PFUser *user = [PFUser currentUser];
-        user.username = textFieldDisplayName.text;
-        user[@"userDescription"] = textFieldProfileDescription.text;
-        [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            NSLog(@"it's logging");
-        }];
+        if (![textFieldNewPassword.text isEqualToString:textFieldConfirmNewPassword.text]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoa!" message:@"Passwords do not match" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+        } else {
+            buttonEditProfile.backgroundColor = [UIColor blueColor];
+            [buttonEditProfile setTitle:@"Edit Your Profile" forState:UIControlStateNormal];
 
+            currentUser.username = textFieldDisplayName.text;
+            currentUser[@"userDescription"] = textFieldProfileDescription.text;
+            currentUser[@"url"] = textFieldURL.text;
+            [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                ///
+            }];
+            userProfileDescription.text = currentUser[@"userDescription"];
+            userURL.text = currentUser[@"url"];
+        }
 
-//        user.userDescription = textFieldProfileDescription.text;
-//        user.user = textFieldProfileDescription.text;
-
-        userProfileDescription.text = user[@"userDescription"];
-        userURL.text = textFieldURL.text;
+        if (![textFieldChangeEmail.text isEqualToString:@""]) {
+            currentUser.email = textFieldChangeEmail.text;
+            [currentUser saveInBackground];
+        }
 
     }
 }
