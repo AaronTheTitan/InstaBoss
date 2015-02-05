@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imagePhoto;
 @property (weak, nonatomic) IBOutlet UITableView *tableComments;
 
+
 @end
 
 @implementation CommentsViewController
