@@ -12,14 +12,7 @@
 
 @implementation BossObject
 
-+ (void)hashTags:(NSString *)input {
-    NSArray *toks = [input componentsSeparatedByString:@" "];
-    for(NSString *tok in toks) {
-        if([tok containsString:@"#"]) {
-            NSLog(@"%@", tok);
-        }
-    }
-}
+
 
 + (NSMutableArray *)convertArray:(NSMutableArray *)input {
 
@@ -37,7 +30,8 @@
     return [[NSDate date] description];
 }
 
-+ (NSString*) generateID:(NSString *)input {
++ (NSString*) generateID:(NSString *)i {
+    NSString *input = [NSString stringWithFormat:@"%@%@", i, [BossObject generateTimeStamp]];
     const char *cstr = [input cStringUsingEncoding:NSUTF8StringEncoding];
     NSData *data = [NSData dataWithBytes:cstr length:input.length];
 

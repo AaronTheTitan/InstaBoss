@@ -29,6 +29,7 @@
 }
 
 - (void)updateWithNewPhoto:(Photo *)photo {
+    NSLog(@"delegate called");
     [self.feed loadFeed];
     self.selectedIndex = 0;
 }

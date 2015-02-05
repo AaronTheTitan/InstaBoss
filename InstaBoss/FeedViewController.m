@@ -32,6 +32,9 @@
     [self loadFeed];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 
 - (void)loadFeed {
     photos = [NSMutableArray new];
@@ -46,7 +49,8 @@
             for(PFObject *parseObject in objects) {
                 [photos addObject:[[Photo alloc] initWithParse:parseObject]];
             }
-            
+
+
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tablePhotos reloadData];
             });

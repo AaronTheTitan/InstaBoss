@@ -11,11 +11,13 @@
 
 @interface Photo : NSObject
 
+@property NSString *parseObjectId;
 @property NSString *userId;
-@property NSString *photoId;
 @property NSString *caption;
 @property NSMutableArray *comments;
 @property NSNumber *likeCount;
+
+@property NSString *photoId;
 
 @property UIImage *image;
 

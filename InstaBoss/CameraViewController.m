@@ -10,6 +10,7 @@
 #import "CameraViewController.h"
 
 #import "Constants.h"
+#import "HashTag.h"
 
 @interface CameraViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 
@@ -48,12 +49,13 @@
 }
 
 - (void)saveImage:(NSString *)name {
+    NSLog(@"%@", name);
+
     Photo *photo = [[Photo alloc] initPhoto];
     photo.caption = name;
     photo.image = self.imageTarget.image;
     [photo persist:^(BOOL succeeded, NSError *error) {
-        if(succeeded) {
-        } else if(error) {
+        if(error) {
             UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, try again :(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [myAlertView show];
         }

@@ -7,6 +7,7 @@
 //
 
 #import "CommentsViewController.h"
+#import "HashTag.h"
 
 @interface CommentsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
@@ -31,7 +32,12 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if(textField.text.length > 0) {
         [self.photo.comments addObject:textField.text];
-        [self.photo persist:nil];
+        [self.photo persist:^(BOOL succeeded, NSError *error) {
+            if(succeeded) {
+                [HashTag persistHashTags:textField.text withObjectId:self.photo.parseObjectId];
+            }
+        }];
+
         [self.tableComments reloadData];
         textField.text = nil;
     }
