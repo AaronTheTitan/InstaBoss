@@ -139,7 +139,12 @@
 
         PFUser *user = [PFUser currentUser];
         user.username = textFieldDisplayName.text;
-//        user.description = textFieldProfileDescription.text;
+        user[@"userDescription"] = textFieldProfileDescription.text;
+
+//        user.userDescription = textFieldProfileDescription.text;
+//        user.user = textFieldProfileDescription.text;
+
+        userProfileDescription.text = user[@"userDescription"];
         userURL.text = textFieldURL.text;
 
     }
