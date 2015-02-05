@@ -353,10 +353,11 @@
 				TargetAttributes = {
 					9138C7561A813EBB0097C0EA = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 3ZZDJNGJUA;
+						DevelopmentTeam = F8C9TB8Q69;
 					};
 					9138C76F1A813EBB0097C0EA = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = F8C9TB8Q69;
 						TestTargetID = 9138C7561A813EBB0097C0EA;
 					};
 				};

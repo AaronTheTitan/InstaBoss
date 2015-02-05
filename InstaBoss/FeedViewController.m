@@ -29,9 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadFeed];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self loadFeed];
+}
 
 - (void)loadFeed {
     photos = [NSMutableArray new];
