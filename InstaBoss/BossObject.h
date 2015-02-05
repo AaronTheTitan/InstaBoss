@@ -10,7 +10,7 @@
 
 @interface BossObject : NSObject
 
-+ (NSArray *)convertArray:(NSMutableArray *)input;
++ (NSMutableArray *)convertArray:(NSMutableArray *)input;
 + (NSString *)generateTimeStamp;
 + (NSString *)generateID;
 + (NSString *)generateID:(NSString *)input;

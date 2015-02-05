@@ -10,6 +10,12 @@
 #import "Photo.h"
 #import "BossObject.h"
 
+@interface Photo ()
+
+@property NSString *objectId;
+
+@end
+
 @implementation Photo
 
 - (instancetype)initPhoto {
@@ -17,8 +23,8 @@
     self.userId = @"";
     self.photoId = @"";
     self.caption = @"";
-    self.comments = [NSArray new];
-    self.hashTags = [NSArray new];
+    self.comments = [NSMutableArray new];
+    self.hashTags = [NSMutableArray new];
     self.likeCount = @0;
 
     return self;
@@ -26,6 +32,9 @@
 
 - (instancetype)initWithParse:(PFObject *)parse {
     self = [super init];
+
+    self.objectId = parse.objectId;
+
 
     self.userId = parse[@"UserId"];
     self.photoId = parse[@"PhotoId"];
@@ -36,13 +45,17 @@
 
     self.image = [UIImage imageWithData:[parse[@"Image"] getData:nil]];
 
-    NSLog(@"%@", self.comments);
-
     return self;
 }
 
-- (void) saveToParse:(void (^)(BOOL succeeded, NSError *error))completionMethod {
+- (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod {
     PFObject *parse = [PFObject objectWithClassName:kParsePhotoObjectClass];
+    self.comments = [NSMutableArray arrayWithArray:[[self.comments reverseObjectEnumerator] allObjects]];
+
+    if(self.objectId) {
+        parse.objectId = self.objectId;
+    }
+
     if(self.image) {
 
         NSData *imageData = UIImagePNGRepresentation(self.image);
@@ -57,6 +70,7 @@
     parse[@"HashTags"] = self.hashTags;
     parse[@"LikeCount"] = self.likeCount;
 
+
     [parse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded) {
         } else if(error) {
@@ -64,9 +78,14 @@
             [myAlertView show];
         }
 
-        completionMethod(succeeded, error);
+        if(completionMethod) {
+
+            completionMethod(succeeded, error);
+        }
         
     }];
+
+
 
 }
 
