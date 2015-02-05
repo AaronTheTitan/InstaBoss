@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HashTag.h"
+
+@protocol SearchViewControllerDelegate <NSObject>
+
+- (void)displayHashTag:(HashTag *)hashTag;
+
+@end
 
 @interface SearchViewController : UIViewController
+
+@property id<SearchViewControllerDelegate> delegate;
 
 @end

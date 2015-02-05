@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Photo.h"
 
-@protocol CameraViewProtocol <NSObject>
+@protocol CameraViewControllerDelegate <NSObject>
 
 - (void)updateWithNewPhoto:(Photo *)photo;
 
@@ -17,7 +17,7 @@
 
 @interface CameraViewController : UIViewController
 
-@property id<CameraViewProtocol> delegate;
+@property id<CameraViewControllerDelegate> delegate;
 
 @end
 

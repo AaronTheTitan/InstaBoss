@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HashTag.h"
 
 @interface FeedViewController : UIViewController
 
-- (void)loadFeed;
+- (void)loadFeedWithHashTag:(HashTag *)hashTag;
 
 @end
