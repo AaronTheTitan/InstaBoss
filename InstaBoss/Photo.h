@@ -15,7 +15,6 @@
 @property NSString *photoId;
 @property NSString *caption;
 @property NSMutableArray *comments;
-@property NSMutableArray *hashTags;
 @property NSNumber *likeCount;
 
 @property UIImage *image;

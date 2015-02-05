@@ -24,7 +24,6 @@
     self.photoId = @"";
     self.caption = @"";
     self.comments = [NSMutableArray new];
-    self.hashTags = [NSMutableArray new];
     self.likeCount = @0;
 
     return self;
@@ -40,7 +39,6 @@
     self.photoId = parse[@"PhotoId"];
     self.caption = parse[@"Caption"];
     self.comments = [BossObject convertArray:parse[@"Comments"]];
-    self.hashTags = [BossObject convertArray:parse[@"HashTags"]];
     self.likeCount = parse[@"LikeCount"];
 
     self.image = [UIImage imageWithData:[parse[@"Image"] getData:nil]];
@@ -67,9 +65,11 @@
     parse[@"UserId"] = self.userId;
     parse[@"Caption"] = self.caption;
     parse[@"Comments"] = self.comments;
-    parse[@"HashTags"] = self.hashTags;
     parse[@"LikeCount"] = self.likeCount;
 
+    for(NSString *comment in self.comments) {
+        [BossObject hashTags:comment];
+    }
 
     [parse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded) {

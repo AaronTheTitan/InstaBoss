@@ -10,6 +10,8 @@
 
 @interface BossObject : NSObject
 
++ (void)hashTags:(NSString *)input;
+
 + (NSMutableArray *)convertArray:(NSMutableArray *)input;
 + (NSString *)generateTimeStamp;
 + (NSString *)generateID;

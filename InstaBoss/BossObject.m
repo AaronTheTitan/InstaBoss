@@ -12,6 +12,15 @@
 
 @implementation BossObject
 
++ (void)hashTags:(NSString *)input {
+    NSArray *toks = [input componentsSeparatedByString:@" "];
+    for(NSString *tok in toks) {
+        if([tok containsString:@"#"]) {
+            NSLog(@"%@", tok);
+        }
+    }
+}
+
 + (NSMutableArray *)convertArray:(NSMutableArray *)input {
 
     NSMutableArray *array = [NSMutableArray new];
