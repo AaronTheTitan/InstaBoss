@@ -8,12 +8,16 @@
 
 #import "ProfileViewController.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 {
     IBOutlet UITextField *textFieldDisplayName;
     IBOutlet UITextField *textFieldProfileDescription;
     IBOutlet UITextField *textFieldURL;
+
     IBOutlet UIButton *buttonEditProfile;
+    IBOutlet UIButton *buttonTakePhoto;
+    IBOutlet UIButton *buttonAddPhoto;
 
     IBOutlet UILabel *userDisplayName;
     IBOutlet UILabel *userProfileDescription;
@@ -28,17 +32,12 @@
     IBOutlet UITextField *textFieldConfirmNewPassword;
 
     PFUser *currentUser;
-
 }
-
-//@property PFUser *user;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewProfile;
 @property (strong, nonatomic) IBOutlet UILabel *numberFollowing;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfFollowers;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfPosts;
-
-//@property PFUser *currentUser;
 
 @end
 
@@ -47,12 +46,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self hideEditFields];
 
     self.navigationItem.title = @"UserName Here";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self hideEditFields];
 
     currentUser = [PFUser currentUser];
     userDisplayName.text = currentUser.username;
@@ -86,7 +85,12 @@
     textFieldNewPassword.alpha = 0;
     textFieldConfirmNewPassword.alpha = 0;
     labelChangePassword.alpha = 0;
-    
+
+    buttonTakePhoto.enabled = NO;
+    buttonTakePhoto.alpha = 0;
+
+    buttonAddPhoto.enabled = NO;
+    buttonAddPhoto.alpha = 0;
 }
 
 - (void)showEditFields {
@@ -118,10 +122,19 @@
     textFieldNewPassword.alpha = 1;
     textFieldConfirmNewPassword.alpha = 1;
     labelChangePassword.alpha = 1;
+
+    buttonTakePhoto.enabled = YES;
+    buttonTakePhoto.alpha = 1;
+
+    buttonAddPhoto.enabled = YES;
+    buttonAddPhoto.alpha = 1;
 }
 
 - (IBAction)tapButtonEditProfile:(UIButton *)sender {
     [self toggleEditing];
+}
+
+- (IBAction)tapButtonEditPhoto:(UIButton *)sender {
 }
 
 - (void)toggleEditing {
@@ -161,9 +174,65 @@
             currentUser.email = textFieldChangeEmail.text;
             [currentUser saveInBackground];
         }
-
     }
 }
+
+
+//----------------------------------------------------------------
+
+- (BOOL)isCameraEnabled {
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        [self noCameraAlert];
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+- (void)noCameraAlert {
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Device has no camera" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [myAlertView show];
+}
+
+- (IBAction)tapButtonTakePhoto:(UIButton *)sender {
+    if ([self isCameraEnabled]) {
+        [self showSourcePicker:UIImagePickerControllerSourceTypeCamera];
+    } else {
+        [self noCameraAlert];
+    }
+}
+
+- (IBAction)tapButtonSelectFromGallery:(UIButton *)sender {
+    [self showSourcePicker:UIImagePickerControllerSourceTypePhotoLibrary];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.imageViewProfile.image = chosenImage;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+
+    currentUser[@"photo"] = chosenImage;
+    [self.user saveInBackground];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+- (void)showSourcePicker:(UIImagePickerControllerSourceType)source {
+
+    UIImagePickerController *picker = [UIImagePickerController new];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = source;
+    [self presentViewController:picker animated:YES completion:^{
+
+    }];
+}
+
+//----------------------------------------------------------------
+
 
 - (IBAction)tapButtonSignOut:(UIBarButtonItem *)sender {
     [PFUser logOut];
