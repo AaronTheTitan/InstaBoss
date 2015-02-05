@@ -22,7 +22,6 @@
 
 - (instancetype)initPhoto {
     self = [super init];
-    self.userId = [PFUser currentUser].username;
     self.caption = @"";
     self.comments = [NSMutableArray new];
     self.likeCount = @0;
@@ -66,7 +65,7 @@
         parse[@"Image"] = [PFFile fileWithName:[BossObject generateID] data:imageData];
     }
 
-    parse[@"UserId"] = self.userId;
+    parse[@"UserId"] = [PFUser currentUser];
     parse[@"Caption"] = self.caption;
     parse[@"Comments"] = self.comments;
     parse[@"LikeCount"] = self.likeCount;

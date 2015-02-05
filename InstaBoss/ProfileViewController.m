@@ -52,7 +52,7 @@
     PFUser *user = [PFUser currentUser];
 
     userDisplayName.text = user.username;
-    userProfileDescription.text = user.description;
+    userProfileDescription.text = user[@"userDescription"];
 
 }
 
@@ -96,7 +96,7 @@
     textFieldURL.alpha = 1;
 
     textFieldDisplayName.text = userDisplayName.text;
-    textFieldProfileDescription.text = userDisplayName.text;
+    textFieldProfileDescription.text = userProfileDescription.text;
     textFieldURL.text = userURL.text;
 
     userDisplayName.alpha = 0;
@@ -140,6 +140,10 @@
         PFUser *user = [PFUser currentUser];
         user.username = textFieldDisplayName.text;
         user[@"userDescription"] = textFieldProfileDescription.text;
+        [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            NSLog(@"it's logging");
+        }];
+
 
 //        user.userDescription = textFieldProfileDescription.text;
 //        user.user = textFieldProfileDescription.text;
