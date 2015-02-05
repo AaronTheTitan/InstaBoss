@@ -62,9 +62,7 @@
 
         [self.items addObject:objectId];
 
-        [self persist:^(BOOL succeeded, NSError *error) {
-
-        }];
+        [self persist:nil];
     }
 }
 
@@ -84,14 +82,12 @@
 
             [query whereKey:@"Tag" containedIn:tags];
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                NSLog(@"\n\n\tfindObjectsInBackgroundWithBlock:: objects.count == %li", objects.count);
                 if (error) {
                     NSLog(@"Error: %@ %@", error, [error userInfo]);
                 } else {
                     for(PFObject *obj in objects) {
                         HashTag *hashTag = [[HashTag alloc] initWithParse:obj];
                         [hashTag addPhotoObjectId:objectId];
-                        NSLog(@"\n\t-------------> %@", hashTag.tag);
                         [tags removeObject:hashTag.tag];
                     }
 
