@@ -70,7 +70,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell" forIndexPath:indexPath];
 
-    Photo *photo = [photos objectAtIndex:indexPath.row];
+    Photo *photo = photos[indexPath.row];
     cell.textLabel.text = photo.caption;
     cell.imageView.image = photo.image;
     return cell;
