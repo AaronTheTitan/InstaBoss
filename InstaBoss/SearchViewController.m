@@ -54,6 +54,10 @@
     }];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.delegate displayHashTag:[filter objectAtIndex:tableView.indexPathForSelectedRow.row]];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return filter.count;
 }

@@ -29,11 +29,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
     [self loadFeed];
 }
+
+//- (void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    [self loadFeed];
+//}
+
+- (void)loadFeedWithHashTag:(HashTag *)hashTag {
+    photos = [NSMutableArray new];
+
+    PFQuery *query = [PFQuery queryWithClassName:kParsePhotoObjectClass];
+
+    [query whereKey:@"PhotoId" containedIn:hashTag.items];
+    
+    [query orderByDescending:@"createdAt"];
+    dispatch_queue_t feedQueue = dispatch_queue_create("feedQueue",NULL);
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        dispatch_async(feedQueue, ^{
+            for(PFObject *parseObject in objects) {
+                [photos addObject:[[Photo alloc] initWithParse:parseObject]];
+            }
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tablePhotos reloadData];
+            });
+        });
+    }];
+}
+
 
 - (void)loadFeed {
     photos = [NSMutableArray new];

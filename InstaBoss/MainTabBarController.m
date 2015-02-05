@@ -9,11 +9,13 @@
 #import "MainTabBarController.h"
 #import "FeedViewController.h"
 #import "CameraViewController.h"
+#import "SearchViewController.h"
 
-@interface MainTabBarController () <CameraViewProtocol>
+@interface MainTabBarController () <CameraViewControllerDelegate, SearchViewControllerDelegate>
 
 @property (strong, nonatomic) FeedViewController *feed;
 @property (strong, nonatomic) CameraViewController *camera;
+@property (strong, nonatomic) SearchViewController *search;
 
 @end
 
@@ -24,13 +26,19 @@
 
     self.feed = [self.viewControllers objectAtIndex:0];
     self.camera = [self.viewControllers objectAtIndex:2];
+    self.search = [self.viewControllers objectAtIndex:3];
 
     self.camera.delegate = self;
+    self.search.delegate = self;
 }
 
 - (void)updateWithNewPhoto:(Photo *)photo {
     self.selectedIndex = 0;
 }
 
+- (void)displayHashTag:(HashTag *)hashTag {
+    self.selectedIndex = 0;
+    [self.feed loadFeedWithHashTag:hashTag];
+}
 
 @end
