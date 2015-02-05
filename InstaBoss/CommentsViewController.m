@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imagePhoto;
 @property (weak, nonatomic) IBOutlet UITableView *tableComments;
 
+@property (strong, nonatomic) IBOutlet UITextField *textFieldEnterComment;
 
 @end
 
@@ -28,6 +29,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)tapButtonAddComment:(UIButton *)sender {
+    [self textFieldShouldReturn:self.textFieldEnterComment];
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if(textField.text.length > 0) {

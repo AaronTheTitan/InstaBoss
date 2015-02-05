@@ -89,7 +89,8 @@
         isEditing = YES;
 
         [self showEditFields];
-        [buttonEditProfile setTitle:@"Done" forState:UIControlStateNormal];
+        buttonEditProfile.backgroundColor = [UIColor redColor];
+        [buttonEditProfile setTitle:@"! -- Done -- !" forState:UIControlStateNormal];
 
     } else {
 
