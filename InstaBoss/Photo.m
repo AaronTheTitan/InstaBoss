@@ -51,12 +51,13 @@
 - (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod {
     self.comments = [NSMutableArray arrayWithArray:[[self.comments reverseObjectEnumerator] allObjects]];
     self.parseObject[@"Comments"] = self.comments;
-    [self.parseObject saveInBackgroundWithBlock:nil];
+    [self.parseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        completionMethod(succeeded, error);
+    }];
 }
 
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod {
     PFObject *parse = [PFObject objectWithClassName:kParsePhotoObjectClass];
-
 
     self.photoId = [BossObject generateID:self.caption];
 
@@ -65,7 +66,7 @@
         parse[@"Image"] = [PFFile fileWithName:[BossObject generateID] data:imageData];
     }
 
-    parse[@"UserId"] = [PFUser currentUser];
+    parse[@"UserId"] = [PFUser currentUser].username;
     parse[@"Caption"] = self.caption;
     parse[@"Comments"] = self.comments;
     parse[@"LikeCount"] = self.likeCount;

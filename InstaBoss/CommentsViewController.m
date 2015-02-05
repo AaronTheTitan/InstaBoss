@@ -40,10 +40,12 @@
             if(succeeded) {
                 [HashTag persistHashTags:textField.text withObjectId:self.photo.photoId];
             }
+
+            textField.text = nil;
         }];
 
         [self.tableComments reloadData];
-        textField.text = nil;
+
     }
 
     [textField resignFirstResponder];

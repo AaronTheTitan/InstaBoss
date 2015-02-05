@@ -75,6 +75,7 @@
 }
 
 + (void)persistHashTags:(NSString *)input withObjectId:(NSString *)objectId {
+    NSLog(@"%@\t\t%@", input, objectId);
     NSArray *toks = [input componentsSeparatedByString:@" "];
     NSMutableArray *tags = [NSMutableArray new];
     for(NSString *tok in toks) {
