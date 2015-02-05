@@ -37,6 +37,14 @@
     return self;
 }
 
+- (BOOL)isMatch:(NSString *)match {
+    if ([self.tag rangeOfString:match].location == NSNotFound) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod {
 
     self.parseObject[@"Tag"] = self.tag;

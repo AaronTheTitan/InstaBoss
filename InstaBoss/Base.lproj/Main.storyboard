@@ -122,7 +122,7 @@
                                             <action selector="tapButtonCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jFb-j1-fhY"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Caption" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gwq-Ho-EfG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Caption" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gwq-Ho-EfG">
                                         <rect key="frame" x="125" y="8" width="350" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -632,9 +632,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="cXk-au-B7r" kind="show" identifier="" id="bxt-gU-uwu"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -678,16 +675,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="search" id="cg5-1c-8aZ"/>
                     <connections>
-                        <outlet property="searchBarInput" destination="bNO-tb-SES" id="MXc-0h-nSl"/>
+                        <outlet property="searchBarInput" destination="bNO-tb-SES" id="9kQ-2B-GOe"/>
                         <outlet property="searchDisplayController" destination="dsn-Mf-63K" id="Dtd-KP-veQ"/>
-                        <outlet property="tableViewSearch" destination="ifg-eG-QDP" id="wOe-FE-dTd"/>
+                        <outlet property="tableViewSearch" destination="ifg-eG-QDP" id="2PW-tH-0xw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qG-NI-btg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="dsn-Mf-63K">
                     <connections>
                         <outlet property="delegate" destination="HjY-ot-YLc" id="ybM-zH-JZx"/>
-                        <outlet property="searchBar" destination="bNO-tb-SES" id="JhR-G2-j8o"/>
                         <outlet property="searchContentsController" destination="HjY-ot-YLc" id="Fyf-wC-3ms"/>
                         <outlet property="searchResultsDataSource" destination="HjY-ot-YLc" id="CqL-Tr-WrY"/>
                         <outlet property="searchResultsDelegate" destination="HjY-ot-YLc" id="zW3-pb-ZjS"/>
@@ -980,7 +976,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-5h-vDv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-5h-vDv">
                                 <rect key="frame" x="0.0" y="-5" width="600" height="605"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvd-ov-38y">
@@ -998,7 +994,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-mE-IFS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-mE-IFS">
                                         <rect key="frame" x="464" y="106" width="44" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="AsG-lm-pNH"/>
@@ -1042,7 +1038,7 @@
                                             <rect key="frame" x="237" y="128" width="70" height="23"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-HR-JaY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="##" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-HR-JaY">
                                         <rect key="frame" x="290" y="108" width="44" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Gxs-Av-gga"/>
@@ -1067,7 +1063,7 @@
                                         <color key="textColor" white="0.53820946810000003" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's Display Name " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Til-V8-S7w">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User's Display Name " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Til-V8-S7w">
                                         <rect key="frame" x="141" y="232" width="227" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="SrW-n4-ojw"/>
@@ -1089,7 +1085,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User profile description goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxC-sR-892">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User profile description goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxC-sR-892">
                                         <rect key="frame" x="141" y="269" width="339" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="RkN-ek-R9J"/>
@@ -1109,7 +1105,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserURL.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF7-5z-rc9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="UserURL.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF7-5z-rc9">
                                         <rect key="frame" x="141" y="307" width="227" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="sQz-aC-vvr"/>
@@ -1128,7 +1124,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-An-VDZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="profilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-An-VDZ">
                                         <rect key="frame" x="126" y="83" width="130" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="iwL-g9-DRt"/>
@@ -1147,7 +1143,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UX-Se-sU9">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UX-Se-sU9">
                                         <rect key="frame" x="298" y="160" width="182" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1512,7 +1508,6 @@
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bxt-gU-uwu"/>
         <segue reference="ofF-1B-gYf"/>
     </inferredMetricsTieBreakers>
 </document>

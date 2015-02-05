@@ -14,6 +14,9 @@
 @property NSString *tag;
 @property NSMutableArray *items;
 
+- (instancetype)initWithParse:(PFObject *)parse;
+- (BOOL)isMatch:(NSString *)match;
+
 + (void)persistHashTags:(NSString *)input withObjectId:(NSString *)objectId;
 
 @end
