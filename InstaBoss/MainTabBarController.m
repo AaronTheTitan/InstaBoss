@@ -10,12 +10,15 @@
 #import "FeedViewController.h"
 #import "CameraViewController.h"
 #import "SearchViewController.h"
+#import "Locator.h"
 
 @interface MainTabBarController () <CameraViewControllerDelegate, SearchViewControllerDelegate>
 
 @property (strong, nonatomic) FeedViewController *feed;
 @property (strong, nonatomic) CameraViewController *camera;
 @property (strong, nonatomic) SearchViewController *search;
+
+@property Locator *locator;
 
 @end
 
@@ -30,6 +33,8 @@
 
     self.camera.delegate = self;
     self.search.delegate = self;
+    self.locator = [Locator new];
+    [self.locator updateLocation];
 }
 
 - (void)updateWithNewPhoto:(Photo *)photo {
@@ -39,6 +44,10 @@
 - (void)displayHashTag:(HashTag *)hashTag {
     self.selectedIndex = 0;
     [self.feed loadFeedWithHashTag:hashTag];
+}
+
+- (MKPointAnnotation *)getLocation {
+    return self.locator.currentLocation;
 }
 
 @end
