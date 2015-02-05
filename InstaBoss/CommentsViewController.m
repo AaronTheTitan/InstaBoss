@@ -38,7 +38,7 @@
         [self.photo.comments addObject:textField.text];
         [self.photo persist:^(BOOL succeeded, NSError *error) {
             if(succeeded) {
-                [HashTag persistHashTags:textField.text withObjectId:self.photo.parseObjectId];
+                [HashTag persistHashTags:textField.text withObjectId:self.photo.photoId];
             }
         }];
 

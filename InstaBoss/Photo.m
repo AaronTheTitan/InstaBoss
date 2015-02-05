@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Aaron Bradley. All rights reserved.
 //
 
+
 #import "Constants.h"
 #import "Photo.h"
 #import "BossObject.h"
@@ -20,7 +21,7 @@
 
 - (instancetype)initPhoto {
     self = [super init];
-    self.userId = @"";
+    self.userId = [PFUser currentUser].username;
     self.caption = @"";
     self.comments = [NSMutableArray new];
     self.likeCount = @0;

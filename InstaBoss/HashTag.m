@@ -83,8 +83,6 @@
         }
     }
 
-    NSLog(@"%@\t%@", objectId, toks);
-
     if(tags.count > 0) {
         PFQuery *query = [PFQuery queryWithClassName:kParseHashTagObjectClass];
 
