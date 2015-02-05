@@ -36,6 +36,10 @@
     }
 }
 
+- (IBAction)tapButtonCaption:(UIButton *)sender {
+    [self textFieldShouldReturn:self.textFieldCaption];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if(self.imageTarget.image) {
         [self saveImage:textField.text];
@@ -48,6 +52,8 @@
 
 }
 
+
+
 - (void)saveImage:(NSString *)name {
     NSLog(@"%@", name);
 
@@ -55,7 +61,9 @@
     photo.caption = name;
     photo.image = self.imageTarget.image;
     [photo persist:^(BOOL succeeded, NSError *error) {
-        if(error) {
+        if(succeeded) {
+            NSLog(@"success");
+        } else if(error) {
             UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, try again :(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [myAlertView show];
         }

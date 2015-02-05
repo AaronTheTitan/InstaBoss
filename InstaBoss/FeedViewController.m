@@ -29,11 +29,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadFeed];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+    [self loadFeed];
 }
 
 - (void)loadFeed {
@@ -80,5 +79,17 @@
     return cell;
 }
 
+//- (void) likeImage {
+//    [object addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
+//    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!error) {
+//            NSLog(@"liked picture!");
+//            [self likedSuccess];
+//        }
+//        else {
+//            [self likedFail];
+//        }
+//    }];
+//}
 
 @end

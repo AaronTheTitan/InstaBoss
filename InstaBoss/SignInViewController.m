@@ -22,6 +22,13 @@
 
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    PFUser *user = [PFUser currentUser];
+    if (user.username != nil) {
+        [self performSegueWithIdentifier:@"login" sender:self];
+    }
+}
+
 - (IBAction)tapButtonLogin:(UIButton *)sender {
     [PFUser logInWithUsernameInBackground:textFieldUsername.text password:textFieldPassword.text block:^(PFUser *user, NSError *error) {
 
