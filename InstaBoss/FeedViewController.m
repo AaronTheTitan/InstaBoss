@@ -25,17 +25,23 @@
 @implementation FeedViewController
 {
     NSMutableArray *photos;
+    BOOL fromSearch;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadFeed];
+    fromSearch = NO;
 }
 
-//- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//    [self loadFeed];
-//}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if(!fromSearch) {
+        [self loadFeed];
+    } else {
+        fromSearch = NO;
+    }
+}
 
 - (void)loadFeedWithHashTag:(HashTag *)hashTag {
     photos = [NSMutableArray new];
@@ -58,6 +64,8 @@
             });
         });
     }];
+
+    fromSearch = YES;
 }
 
 
