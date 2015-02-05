@@ -14,11 +14,12 @@
     IBOutlet UITextField *textFieldProfileDescription;
     IBOutlet UITextField *textFieldURL;
     IBOutlet UIButton *buttonEditProfile;
-    BOOL isEditing;
 
     IBOutlet UILabel *userDisplayName;
     IBOutlet UILabel *userProfileDescription;
     IBOutlet UILabel *userURL;
+
+    BOOL isEditing;
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewProfile;
@@ -27,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *numberOfPosts;
 
 @end
+
 
 @implementation ProfileViewController
 
@@ -38,7 +40,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self hideEditFields];
-
 }
 
 - (void)hideEditFields {
