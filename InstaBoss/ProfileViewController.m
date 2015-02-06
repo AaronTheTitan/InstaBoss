@@ -54,6 +54,16 @@
 - (void)viewDidAppear:(BOOL)animated {
 
     currentUser = [PFUser currentUser];
+    [currentUser[@"userPhoto"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if(!error) {
+            self.imageViewProfile.image = [UIImage imageWithData:data];
+        }
+    }];
+
+
+
+
+
     userDisplayName.text = currentUser.username;
     userProfileDescription.text = currentUser[@"userDescription"];
     userURL.text = currentUser[@"url"];
@@ -209,11 +219,16 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+
+    NSData *imageData = UIImageJPEGRepresentation(chosenImage, 60);
+    PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_profilePhoto.jpg", currentUser.username] data:imageData];
+
+    currentUser[@"userPhoto"] = imageFile;
+    [imageFile saveInBackground];
+
     self.imageViewProfile.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
 
-    currentUser[@"photo"] = chosenImage;
-    [self.user saveInBackground];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
