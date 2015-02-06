@@ -87,8 +87,11 @@
     return cell;
 }
 
-- (void)socializeWithUser {
-    NSLog(@"CELL CLICK");
+
+
+- (void)socializeWithUser:(FriendCell *)button {
+    NSLog(@"clicked");
+    NSLog(@"%@", button.friendTextLabel.text);
 }
 
 @end

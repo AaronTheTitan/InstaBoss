@@ -8,15 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class FriendCell;
+
 @protocol FriendCellDelegate <NSObject>
 
-- (void) socializeWithUser;
-- (void)cellDidOpen:(UITableViewCell *)cell;
-- (void)cellDidClose:(UITableViewCell *)cell;
+- (void) socializeWithUser:(FriendCell *)button;
+//- (void)cellDidOpen:(UITableViewCell *)cell;
+//- (void)cellDidClose:(UITableViewCell *)cell;
 
 @end
 
 @interface FriendCell : UITableViewCell
+
 
 @property (nonatomic, weak) IBOutlet UILabel *friendTextLabel;
 

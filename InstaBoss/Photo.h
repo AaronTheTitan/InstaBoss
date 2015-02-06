@@ -26,6 +26,8 @@
 @property NSNumber *latitude;
 @property NSNumber *longitude;
 
+@property NSNumber *likeCount;
+
 @property MKPointAnnotation *location;
 
 - (instancetype)initPhoto;
