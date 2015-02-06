@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imagePhoto;
 @property (weak, nonatomic) IBOutlet UITableView *tableComments;
 @property (strong, nonatomic) IBOutlet UITextField *textFieldEnterComment;
+@property (strong, nonatomic) IBOutlet UILabel *labelLikes;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageLike;
 
@@ -32,6 +33,7 @@
 
 
     self.imageLike.hidden = ![self.photo isLikedBy:[PFUser currentUser].username];
+    self.labelLikes.text = [NSString stringWithFormat:@"%@ Likes", self.photo.likeCount];
 }
 
 - (void)likePhoto {
@@ -43,7 +45,6 @@
         [self.photo likePhoto:nil];
     }
 
-    
     self.imageLike.hidden = !self.imageLike.hidden;
 
 }

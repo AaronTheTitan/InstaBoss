@@ -118,7 +118,7 @@
 
     cell.imageViewFeedImage.image = photo.image;
     cell.username.text = photo.userId;
-//    cell.likes =
+    cell.likes.text = [NSString stringWithFormat:@"%@ Likes",photo.likeCount];
 
     return cell;
 }

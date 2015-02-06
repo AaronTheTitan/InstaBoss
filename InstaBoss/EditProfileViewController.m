@@ -49,10 +49,18 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
+
     
         textFieldDisplayName.text = userDisplayName.text;
         textFieldProfileDescription.text = userProfileDescription.text;
         textFieldURL.text = userURL.text;
+
+    [self.currentUser[@"userPhoto"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if(!error) {
+            imageViewProfile.image = [UIImage imageWithData:data];
+        }
+    }];
 }
 
 //----------------------------------------------------------------
@@ -120,6 +128,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+- (IBAction)tapButtonDone:(UIButton *)sender {
+    [self saveEdits];
+}
+
+
 - (IBAction)tapButtonSaveEdits:(UIBarButtonItem *)sender {
     [self saveEdits];
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -133,9 +147,6 @@
         }
     }
      else {
-//        buttonEditProfile.backgroundColor = [UIColor blueColor];
-//        [buttonEditProfile setTitle:@"Edit Your Profile" forState:UIControlStateNormal];
-
 
         [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             self.currentUser.username = textFieldDisplayName.text;

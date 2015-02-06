@@ -23,9 +23,15 @@
 //    IBOutlet UIButton *buttonTakePhoto;
 //    IBOutlet UIButton *buttonAddPhoto;
 //
+
+
+
     IBOutlet UILabel *userDisplayName;
     IBOutlet UILabel *userProfileDescription;
     IBOutlet UILabel *userURL;
+
+    IBOutlet UILabel *labelFollowers;
+    IBOutlet UILabel *labelFollowing;
 //
 //    BOOL isEditing;
 //
@@ -54,7 +60,7 @@
     [super viewDidLoad];
 //    [self hideEditFields];
 
-    self.navigationItem.title = @"UserName Here";
+    self.navigationItem.title = currentUser.username;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -72,6 +78,8 @@
     userDisplayName.text = currentUser.username;
     userProfileDescription.text = currentUser[@"userDescription"];
     userURL.text = currentUser[@"url"];
+//    labelFollowers.text = currentUser.
+//    labelFollowing.text = currentUser.
 
     PFQuery *query = [PFQuery queryWithClassName:kParsePhotoObjectClass];
     [query whereKey:@"UserId" equalTo:currentUser.username];
