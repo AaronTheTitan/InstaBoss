@@ -12,6 +12,7 @@
 #import "FeedViewController.h"
 #import "CameraViewController.h"
 #import "CommentsViewController.h"
+#import "CustomFeedCell.h"
 
 #import "Photo.h"
 #import "FeedCell.h"
@@ -19,6 +20,7 @@
 @interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tablePhotos;
+//@property (strong, nonatomic) IBOutlet UIImageView *imageViewFeedImage;
 
 @end
 
@@ -107,11 +109,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell" forIndexPath:indexPath];
+    CustomFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell" forIndexPath:indexPath];
 
     Photo *photo = photos[indexPath.row];
-    cell.textLabel.text = photo.caption;
-    cell.imageView.image = photo.image;
+//    cell.textLabel.text = photo.caption;
+    cell.caption.text = photo.caption;
+//    cell.imageView.image = photo.image;
+
+
+    cell.imageViewFeedImage.image = photo.image;
+    cell.username.text = photo.userId;
+//    cell.likes =
+
     return cell;
 }
 

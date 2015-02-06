@@ -24,6 +24,8 @@
 		910088481A82C70400BD946A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910088471A82C70400BD946A /* Bolts.framework */; };
 		9100884B1A82C91500BD946A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100884A1A82C91500BD946A /* ProfileViewController.m */; };
 		91230D331A83EAF3008CC500 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91230D321A83EAF3008CC500 /* SearchViewController.m */; };
+		913501911A84804900A58CD8 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913501901A84804900A58CD8 /* EditProfileViewController.m */; };
+		913501941A8484FF00A58CD8 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 913501931A8484FF00A58CD8 /* ImageCollectionViewCell.m */; };
 		9138C75D1A813EBB0097C0EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75C1A813EBB0097C0EA /* main.m */; };
 		9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C75F1A813EBB0097C0EA /* AppDelegate.m */; };
 		9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9138C7621A813EBB0097C0EA /* HomeViewController.m */; };
@@ -47,6 +49,7 @@
 		914AC20D1A81883100A60F4A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2081A81883100A60F4A /* ParseFacebookUtils.framework */; };
 		914AC20E1A81883100A60F4A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914AC2091A81883100A60F4A /* ParseUI.framework */; };
 		914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914AD60A1A8199F300C9CDE0 /* FeedViewController.m */; };
+		91FF44A61A8515A70055CD59 /* CustomFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FF44A51A8515A70055CD59 /* CustomFeedCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,10 @@
 		9100884A1A82C91500BD946A /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		91230D311A83EAF3008CC500 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = InstaBoss/SearchViewController.h; sourceTree = "<group>"; };
 		91230D321A83EAF3008CC500 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = InstaBoss/SearchViewController.m; sourceTree = "<group>"; };
+		9135018F1A84804900A58CD8 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileViewController.h; path = InstaBoss/EditProfileViewController.h; sourceTree = "<group>"; };
+		913501901A84804900A58CD8 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileViewController.m; path = InstaBoss/EditProfileViewController.m; sourceTree = "<group>"; };
+		913501921A8484FF00A58CD8 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCollectionViewCell.h; path = InstaBoss/ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		913501931A8484FF00A58CD8 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCollectionViewCell.m; path = InstaBoss/ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		9138C7571A813EBB0097C0EA /* InstaBoss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaBoss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138C75B1A813EBB0097C0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9138C75C1A813EBB0097C0EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +130,8 @@
 		914AC2091A81883100A60F4A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
 		914AD6091A8199F300C9CDE0 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		914AD60A1A8199F300C9CDE0 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		91FF44A41A8515A70055CD59 /* CustomFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomFeedCell.h; path = InstaBoss/CustomFeedCell.h; sourceTree = "<group>"; };
+		91FF44A51A8515A70055CD59 /* CustomFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomFeedCell.m; path = InstaBoss/CustomFeedCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +256,12 @@
 		9138C74E1A813EBB0097C0EA = {
 			isa = PBXGroup;
 			children = (
+				91FF44A41A8515A70055CD59 /* CustomFeedCell.h */,
+				91FF44A51A8515A70055CD59 /* CustomFeedCell.m */,
+				913501921A8484FF00A58CD8 /* ImageCollectionViewCell.h */,
+				913501931A8484FF00A58CD8 /* ImageCollectionViewCell.m */,
+				9135018F1A84804900A58CD8 /* EditProfileViewController.h */,
+				913501901A84804900A58CD8 /* EditProfileViewController.m */,
 				88D71ED41A84224F00B83B7D /* MapKit.framework */,
 				9138C7591A813EBB0097C0EA /* InstaBoss */,
 				9138C7731A813EBB0097C0EA /* InstaBossTests */,
@@ -453,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D71ED31A84221A00B83B7D /* Locator.m in Sources */,
+				913501941A8484FF00A58CD8 /* ImageCollectionViewCell.m in Sources */,
 				887AEFF31A818626007153E4 /* Photo.m in Sources */,
 				88D085D11A82314500CB4B52 /* FeedCell.m in Sources */,
 				88D085D51A82436F00CB4B52 /* MainTabBarController.m in Sources */,
@@ -464,6 +480,8 @@
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
 				88D71ED81A84433C00B83B7D /* UserSearchViewController.m in Sources */,
+				913501911A84804900A58CD8 /* EditProfileViewController.m in Sources */,
+				91FF44A61A8515A70055CD59 /* CustomFeedCell.m in Sources */,
 				88D71ECC1A82F9F600B83B7D /* HashTag.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
 				88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */,
