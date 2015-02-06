@@ -16,4 +16,6 @@
 
 - (BOOL)isMatch:(NSString *)match;
 
++ (void)updateSocial:(NSString *)action withUser:(NSString *)targetUser;
+
 @end

@@ -11,7 +11,7 @@ static CGFloat const kBounceValue = 20.0f;
 
 @interface FriendCell () <UIGestureRecognizerDelegate>
 
-@property (nonatomic, weak) IBOutlet UIButton *friendButton;
+
 @property (nonatomic, weak) IBOutlet UIView *friendContentView;
 
 
@@ -207,6 +207,16 @@ static CGFloat const kBounceValue = 20.0f;
     }
     
     [self.delegate socializeWithUser:self];
+}
+
+- (void)isFollowing:(BOOL)status {
+    if(status) {
+        [self.friendButton setTitle:@"Unfollow" forState:UIControlStateNormal];
+        [self.friendButton setTintColor:[UIColor redColor]];
+    } else {
+        [self.friendButton setTitle:@"Follow" forState:UIControlStateNormal];
+        [self.friendButton setTintColor:[UIColor greenColor]];
+    }
 }
 
 - (void)openCell {

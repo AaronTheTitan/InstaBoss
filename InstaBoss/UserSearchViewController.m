@@ -7,6 +7,7 @@
 //
 
 #import <Parse/Parse.h>
+#import "Constants.h"
 
 #import "UserSearchViewController.h"
 #import "MapViewController.h"
@@ -26,6 +27,8 @@
 {
     NSMutableArray *users;
     NSMutableArray *filter;
+
+    NSMutableArray *following;
 }
 
 - (void)viewDidLoad {
@@ -42,16 +45,34 @@
 
     PFQuery *query = [PFUser query];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+
+        PFQuery *socialProfile = [PFQuery queryWithClassName:kParseSocialObject];
+        [socialProfile whereKey:@"username" equalTo:[PFUser currentUser].username];
+        [socialProfile findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            following = objects.firstObject[@"Following"];
+
+            [self.tableUsers reloadData];
+        }];
+
         if (!error) {
             for(PFObject *object in objects) {
                 User *user = [User new];
                 user.userName = object[@"username"];
-                [users addObject:user];
+                if(![user.userName isEqualToString:[PFUser currentUser].username]) {
+                    [users addObject:user];
+                }
             }
         } else {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
+
+
+        filter = users;
+        [self.tableUsers reloadData];
     }];
+
+
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -69,6 +90,10 @@
         }
     }
 
+    if(searchBar.text.length == 0) {
+        filter = users;
+    }
+
     [self.tableUsers reloadData];
 }
 
@@ -81,6 +106,7 @@
 
     User *user = filter[indexPath.row];
 
+    [cell isFollowing:[following containsObject:user.userName]];
     cell.friendTextLabel.text = user.userName;
     cell.delegate = self;
 
@@ -90,8 +116,7 @@
 
 
 - (void)socializeWithUser:(FriendCell *)button {
-    NSLog(@"clicked");
-    NSLog(@"%@", button.friendTextLabel.text);
+    [User updateSocial:button.friendButton.titleLabel.text withUser:button.friendTextLabel.text];
 }
 
 @end

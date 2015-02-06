@@ -9,6 +9,7 @@
 #ifndef InstaBoss_Constants_h
 #define InstaBoss_Constants_h
 
+#define kParseSocialObject @"SocialX"
 #define kParsePhotoObjectClass @"PhotoX"
 #define kParseHashTagObjectClass @"HashTagX"
 
