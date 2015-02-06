@@ -7,6 +7,8 @@
 //
 
 #import "ProfileViewController.h"
+#import "Constants.h"
+#import "Photo.h"
 
 @interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -52,6 +54,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 
     currentUser = [PFUser currentUser];
     [currentUser[@"userPhoto"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -60,13 +63,25 @@
         }
     }];
 
-
-
-
-
     userDisplayName.text = currentUser.username;
     userProfileDescription.text = currentUser[@"userDescription"];
     userURL.text = currentUser[@"url"];
+
+    PFQuery *query = [PFQuery queryWithClassName:kParsePhotoObjectClass];
+    [query whereKey:@"UserId" equalTo:currentUser];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for(PFObject *object in objects) {
+                Photo *photo = [[Photo alloc] initWithParse:object];
+                [photo ]
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+/// populate collection view
+
+    }];
 
 }
 
