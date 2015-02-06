@@ -12,7 +12,9 @@
 #import "MapViewController.h"
 #import "User.h"
 
-@interface UserSearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+#import "FriendCell.h"
+
+@interface UserSearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, FriendCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchUsers;
 @property (weak, nonatomic) IBOutlet UITableView *tableUsers;
@@ -57,6 +59,7 @@
     map.user = filter[self.tableUsers.indexPathForSelectedRow.row];
 }
 
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     filter = [NSMutableArray new];
 
@@ -74,13 +77,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
+    FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
 
     User *user = filter[indexPath.row];
 
-    cell.textLabel.text = user.userName;
+    cell.friendTextLabel.text = user.userName;
+    cell.delegate = self;
 
     return cell;
+}
+
+- (void)socializeWithUser {
+    NSLog(@"CELL CLICK");
 }
 
 @end

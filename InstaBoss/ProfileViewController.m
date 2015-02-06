@@ -73,7 +73,7 @@
         if (!error) {
             for(PFObject *object in objects) {
                 Photo *photo = [[Photo alloc] initWithParse:object];
-                [photo ]
+
             }
         } else {
             // Log details of the failure

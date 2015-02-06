@@ -81,7 +81,6 @@
         dispatch_async(feedQueue, ^{
             for(PFObject *parseObject in objects) {
                 Photo *photo = [[Photo alloc] initWithParse:parseObject];
-                [photo loadImage];
                 [photos addObject:photo];
             }
 

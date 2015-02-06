@@ -41,7 +41,6 @@
                 Photo *photo = [[Photo alloc] initWithParse:object];
                 [photos setObject:photo forKey:photo.caption];
                 [self.mapPhotos addAnnotation:photo.location];
-                [photo loadImage];
             }
         } else {
             // Log details of the failure

@@ -20,6 +20,7 @@
 		88D71ED51A84224F00B83B7D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D71ED41A84224F00B83B7D /* MapKit.framework */; };
 		88D71ED81A84433C00B83B7D /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D71ED71A84433C00B83B7D /* UserSearchViewController.m */; };
 		88D71EDB1A84485300B83B7D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D71EDA1A84485300B83B7D /* MapViewController.m */; };
+		88D71EDE1A84F40200B83B7D /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D71EDD1A84F40200B83B7D /* FriendCell.m */; };
 		910088461A82AFBE00BD946A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910088451A82AFBE00BD946A /* SignInViewController.m */; };
 		910088481A82C70400BD946A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910088471A82C70400BD946A /* Bolts.framework */; };
 		9100884B1A82C91500BD946A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100884A1A82C91500BD946A /* ProfileViewController.m */; };
@@ -86,6 +87,8 @@
 		88D71ED71A84433C00B83B7D /* UserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSearchViewController.m; path = InstaBoss/UserSearchViewController.m; sourceTree = "<group>"; };
 		88D71ED91A84485300B83B7D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = InstaBoss/MapViewController.h; sourceTree = "<group>"; };
 		88D71EDA1A84485300B83B7D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = InstaBoss/MapViewController.m; sourceTree = "<group>"; };
+		88D71EDC1A84F40200B83B7D /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCell.h; path = InstaBoss/FriendCell.h; sourceTree = "<group>"; };
+		88D71EDD1A84F40200B83B7D /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendCell.m; path = InstaBoss/FriendCell.m; sourceTree = "<group>"; };
 		910088441A82AFBE00BD946A /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		910088451A82AFBE00BD946A /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		910088471A82C70400BD946A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				91230D321A83EAF3008CC500 /* SearchViewController.m */,
 				88D71ED91A84485300B83B7D /* MapViewController.h */,
 				88D71EDA1A84485300B83B7D /* MapViewController.m */,
+				88D71EDC1A84F40200B83B7D /* FriendCell.h */,
+				88D71EDD1A84F40200B83B7D /* FriendCell.m */,
 			);
 			name = "Search Controller";
 			path = ..;
@@ -459,6 +464,7 @@
 				887AEFF41A818626007153E4 /* User.m in Sources */,
 				910088461A82AFBE00BD946A /* SignInViewController.m in Sources */,
 				914AD60B1A8199F300C9CDE0 /* FeedViewController.m in Sources */,
+				88D71EDE1A84F40200B83B7D /* FriendCell.m in Sources */,
 				91230D331A83EAF3008CC500 /* SearchViewController.m in Sources */,
 				88B1320A1A82B06700F04C2A /* BossObject.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,

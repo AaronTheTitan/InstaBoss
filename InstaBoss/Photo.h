@@ -15,8 +15,9 @@
 @property NSString *parseObjectId;
 @property NSString *userId;
 @property NSString *caption;
+
 @property NSMutableArray *comments;
-@property NSNumber *likeCount;
+@property NSMutableArray *likes;
 
 @property NSString *photoId;
 
@@ -30,7 +31,8 @@
 - (instancetype)initPhoto;
 - (instancetype)initWithParse:(PFObject *)parse;
 
-- (void)loadImage;
+- (BOOL)isLikedBy:(NSString *)user;
+- (void)likePhoto:(void (^)(BOOL succeeded, NSError *error))completionMethod;
 
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod;
 - (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod;

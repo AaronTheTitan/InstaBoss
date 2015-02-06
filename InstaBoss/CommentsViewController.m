@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableComments;
 @property (strong, nonatomic) IBOutlet UITextField *textFieldEnterComment;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageLike;
+
 @end
 
 @implementation CommentsViewController
@@ -22,6 +24,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.imagePhoto.image = self.photo.image;
+
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(likePhoto)];
+    tapRecognizer.numberOfTapsRequired = 2;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [self.imagePhoto addGestureRecognizer:tapRecognizer];
+
+
+    self.imageLike.hidden = ![self.photo isLikedBy:[PFUser currentUser].username];
+}
+
+- (void)likePhoto {
+    if(self.imageLike.hidden) {
+        [self.photo.likes addObject:[PFUser currentUser].username];
+        [self.photo likePhoto:nil];
+    } else {
+        [self.photo.likes removeObject:[PFUser currentUser].username];
+        [self.photo likePhoto:nil];
+    }
+
+    
+    self.imageLike.hidden = !self.imageLike.hidden;
+
 }
 
 
