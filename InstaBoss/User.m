@@ -10,4 +10,12 @@
 
 @implementation User
 
+- (BOOL)isMatch:(NSString *)match {
+    if ([self.userName rangeOfString:match].location == NSNotFound) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 @end

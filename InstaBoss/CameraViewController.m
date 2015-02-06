@@ -60,7 +60,7 @@
     Photo *photo = [[Photo alloc] initPhoto];
     photo.caption = name;
     photo.image = self.imageTarget.image;
-    photo.currentLocation = [self.delegate getLocation];
+    photo.location = [self.delegate getLocation];
     [photo persist:^(BOOL succeeded, NSError *error) {
         if(succeeded) {
             NSLog(@"success");

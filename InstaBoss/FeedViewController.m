@@ -80,7 +80,9 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         dispatch_async(feedQueue, ^{
             for(PFObject *parseObject in objects) {
-                [photos addObject:[[Photo alloc] initWithParse:parseObject]];
+                Photo *photo = [[Photo alloc] initWithParse:parseObject];
+                [photo loadImage];
+                [photos addObject:photo];
             }
 
 
