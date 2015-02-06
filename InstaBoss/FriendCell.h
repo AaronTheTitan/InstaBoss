@@ -20,11 +20,11 @@
 
 @interface FriendCell : UITableViewCell
 
-
+@property (nonatomic, weak) IBOutlet UIButton *friendButton;
 @property (nonatomic, weak) IBOutlet UILabel *friendTextLabel;
 
 @property (nonatomic, weak) id <FriendCellDelegate> delegate;
 
-- (void)openCell;
+- (void)isFollowing:(BOOL)status;
 
 @end
