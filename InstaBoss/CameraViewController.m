@@ -98,6 +98,8 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     NSData *imageData = UIImageJPEGRepresentation(chosenImage, 1);
     PFFile *imageFile = [PFFile fileWithName:@"userPhoto" data:imageData];
+    [imageFile saveInBackground];
+
 
     self.imageTarget.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];

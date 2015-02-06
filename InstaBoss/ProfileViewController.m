@@ -7,6 +7,8 @@
 //
 
 #import "ProfileViewController.h"
+#import "Constants.h"
+#import "Photo.h"
 
 @interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -52,11 +54,34 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 
     currentUser = [PFUser currentUser];
+    [currentUser[@"userPhoto"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if(!error) {
+            self.imageViewProfile.image = [UIImage imageWithData:data];
+        }
+    }];
+
     userDisplayName.text = currentUser.username;
     userProfileDescription.text = currentUser[@"userDescription"];
     userURL.text = currentUser[@"url"];
+
+    PFQuery *query = [PFQuery queryWithClassName:kParsePhotoObjectClass];
+    [query whereKey:@"UserId" equalTo:currentUser];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for(PFObject *object in objects) {
+                Photo *photo = [[Photo alloc] initWithParse:object];
+                [photo ]
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+/// populate collection view
+
+    }];
 
 }
 
@@ -209,11 +234,16 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+
+    NSData *imageData = UIImageJPEGRepresentation(chosenImage, 60);
+    PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_profilePhoto.jpg", currentUser.username] data:imageData];
+
+    currentUser[@"userPhoto"] = imageFile;
+    [imageFile saveInBackground];
+
     self.imageViewProfile.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
 
-    currentUser[@"photo"] = chosenImage;
-    [self.user saveInBackground];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
