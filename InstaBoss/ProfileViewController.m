@@ -55,12 +55,26 @@
 
 
 @implementation ProfileViewController
+{
+    NSMutableArray *following;
+    NSMutableArray *followers;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self hideEditFields];
 
     self.navigationItem.title = currentUser.username;
+
+    PFQuery *socialProfile = [PFQuery queryWithClassName:kParseSocialObject];
+    [socialProfile whereKey:@"username" equalTo:[PFUser currentUser].username];
+    [socialProfile findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        following = objects.firstObject[@"Following"];
+        followers = objects.firstObject[@"Followers"];
+        labelFollowers.text = [NSString stringWithFormat:@"%li", followers.count];
+        labelFollowing.text = [NSString stringWithFormat:@"%li", following.count];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
