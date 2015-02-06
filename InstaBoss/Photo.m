@@ -24,7 +24,7 @@
     self = [super init];
     self.caption = @"";
     self.comments = [NSMutableArray new];
-    self.likeCount = @0;
+    self.likes = [NSMutableArray new];
     return self;
 }
 
@@ -38,13 +38,18 @@
 
     self.userId = parse[@"UserId"];
     self.caption = parse[@"Caption"];
-    self.comments = [BossObject convertArray:parse[@"Comments"]];
-    self.likeCount = parse[@"LikeCount"];
 
     self.photoId = parse[@"PhotoId"];
 
     self.latitude = parse[@"Latitude"];
     self.longitude = parse[@"Longitude"];
+
+
+    self.comments = [BossObject convertArray:parse[@"Comments"]];
+    
+    self.likes = [BossObject convertArray:parse[@"Likes"]];
+
+    self.image = [UIImage imageWithData:[self.parseObject[@"Image"] getData:nil]];
 
     self.location = [[MKPointAnnotation alloc] init];
     self.location.title = self.caption;
@@ -53,16 +58,34 @@
     return self;
 }
 
-- (void)loadImage {
-    self.image = [UIImage imageWithData:[self.parseObject[@"Image"] getData:nil]];
+- (void)likePhoto:(void (^)(BOOL succeeded, NSError *error))completionMethod {
+    self.likes = [NSMutableArray arrayWithArray:[[self.likes reverseObjectEnumerator] allObjects]];
+    self.parseObject[@"Likes"] = self.likes;
+    [self.parseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(completionMethod) {
+            completionMethod(succeeded, error);
+        }
+    }];
 }
 
 - (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod {
     self.comments = [NSMutableArray arrayWithArray:[[self.comments reverseObjectEnumerator] allObjects]];
     self.parseObject[@"Comments"] = self.comments;
     [self.parseObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        completionMethod(succeeded, error);
+        if(completionMethod) {
+            completionMethod(succeeded, error);
+        }
     }];
+}
+
+- (BOOL)isLikedBy:(NSString *)user {
+    for(int i = 0 ; i < self.likes.count ; i++) {
+        if([self.likes[i] isEqualToString:user]) {
+            return YES;
+        }
+    }
+
+    return NO;
 }
 
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod {
@@ -80,12 +103,13 @@
 
     parse[@"UserId"] = [PFUser currentUser].username;
     parse[@"Caption"] = self.caption;
-    parse[@"Comments"] = self.comments;
-    parse[@"LikeCount"] = self.likeCount;
     parse[@"PhotoId"] = self.photoId;
     parse[@"Latitude"] = self.latitude;
     parse[@"Longitude"] = self.longitude;
 
+    
+    parse[@"Comments"] = self.comments;
+    parse[@"Likes"] = self.likes;
 
     [parse saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded) {

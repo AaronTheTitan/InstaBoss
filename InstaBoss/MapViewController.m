@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "Constants.h"
 #import "MapViewController.h"
+#import "CommentsViewController.h"
 #import "Photo.h"
 
 @interface MapViewController () <MKMapViewDelegate>
@@ -21,7 +22,7 @@
 
 @implementation MapViewController
 {
-    NSMutableArray *photos;
+    NSMutableDictionary *photos;
 }
 
 - (void)viewDidLoad {
@@ -35,9 +36,10 @@
     [query whereKey:@"UserId" equalTo:self.user.userName];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
+            photos = [NSMutableDictionary new];
             for(PFObject *object in objects) {
                 Photo *photo = [[Photo alloc] initWithParse:object];
-                [photos addObject:photo];
+                [photos setObject:photo forKey:photo.caption];
                 [self.mapPhotos addAnnotation:photo.location];
             }
         } else {
@@ -52,11 +54,26 @@
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     MKAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
     pin.canShowCallout = YES;
+    pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return pin;
 }
 
 - (IBAction)tapButtonDismiss:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+
+    // use the annotation view as the sender
+
+    [self performSegueWithIdentifier:@"ToCommentsFromMap" sender:view];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(MKAnnotationView *)sender
+{
+    CommentsViewController *cvc = segue.destinationViewController;
+    cvc.photo = photos[sender.annotation.title];
 }
 
 @end

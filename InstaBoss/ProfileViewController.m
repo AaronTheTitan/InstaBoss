@@ -78,8 +78,9 @@
         if (!error) {
             for(PFObject *object in objects) {
                 Photo *photo = [[Photo alloc] initWithParse:object];
-                [photo loadImage];
+
                 [photos addObject:photo];
+
             }
 
             [collectionViewPhotos reloadData];
