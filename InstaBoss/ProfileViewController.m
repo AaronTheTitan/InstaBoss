@@ -57,7 +57,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
 
     photos = [NSMutableArray new];
     currentUser = [PFUser currentUser];

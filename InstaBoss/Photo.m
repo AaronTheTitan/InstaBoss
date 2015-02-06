@@ -48,6 +48,7 @@
     self.comments = [BossObject convertArray:parse[@"Comments"]];
     
     self.likes = [BossObject convertArray:parse[@"Likes"]];
+    self.likeCount = [NSNumber numberWithInt:(int)self.likes.count];
 
     self.image = [UIImage imageWithData:[self.parseObject[@"Image"] getData:nil]];
 

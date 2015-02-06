@@ -205,7 +205,12 @@ static CGFloat const kBounceValue = 20.0f;
         [self.friendButton setTitle:@"Follow" forState:UIControlStateNormal];
         [self.friendButton setTintColor:[UIColor greenColor]];
     }
-    [self.delegate socializeWithUser];
+    
+    [self.delegate socializeWithUser:self];
+}
+
+- (void)openCell {
+    [self setConstraintsToShowAllButtons:NO notifyDelegateDidOpen:NO];
 }
 
 @end
