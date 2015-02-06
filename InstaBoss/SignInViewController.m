@@ -23,6 +23,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     PFUser *user = [PFUser currentUser];
     if (user.username != nil) {
         [self performSegueWithIdentifier:@"login" sender:self];
