@@ -25,10 +25,13 @@
 @property NSNumber *latitude;
 @property NSNumber *longitude;
 
-@property MKPointAnnotation *currentLocation;
+@property MKPointAnnotation *location;
 
 - (instancetype)initPhoto;
 - (instancetype)initWithParse:(PFObject *)parse;
+
+- (void)loadImage;
+
 - (void) persist:(void (^)(BOOL succeeded, NSError *error))completionMethod;
 - (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod;
 

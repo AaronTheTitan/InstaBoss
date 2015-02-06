@@ -18,6 +18,8 @@
 		88D71ECC1A82F9F600B83B7D /* HashTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D71ECB1A82F9F600B83B7D /* HashTag.m */; };
 		88D71ED31A84221A00B83B7D /* Locator.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D71ED21A84221A00B83B7D /* Locator.m */; };
 		88D71ED51A84224F00B83B7D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D71ED41A84224F00B83B7D /* MapKit.framework */; };
+		88D71ED81A84433C00B83B7D /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D71ED71A84433C00B83B7D /* UserSearchViewController.m */; };
+		88D71EDB1A84485300B83B7D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D71EDA1A84485300B83B7D /* MapViewController.m */; };
 		910088461A82AFBE00BD946A /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910088451A82AFBE00BD946A /* SignInViewController.m */; };
 		910088481A82C70400BD946A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910088471A82C70400BD946A /* Bolts.framework */; };
 		9100884B1A82C91500BD946A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9100884A1A82C91500BD946A /* ProfileViewController.m */; };
@@ -80,6 +82,10 @@
 		88D71ED11A84221A00B83B7D /* Locator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locator.h; sourceTree = "<group>"; };
 		88D71ED21A84221A00B83B7D /* Locator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locator.m; sourceTree = "<group>"; };
 		88D71ED41A84224F00B83B7D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		88D71ED61A84433C00B83B7D /* UserSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSearchViewController.h; path = InstaBoss/UserSearchViewController.h; sourceTree = "<group>"; };
+		88D71ED71A84433C00B83B7D /* UserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSearchViewController.m; path = InstaBoss/UserSearchViewController.m; sourceTree = "<group>"; };
+		88D71ED91A84485300B83B7D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = InstaBoss/MapViewController.h; sourceTree = "<group>"; };
+		88D71EDA1A84485300B83B7D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = InstaBoss/MapViewController.m; sourceTree = "<group>"; };
 		910088441A82AFBE00BD946A /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		910088451A82AFBE00BD946A /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		910088471A82C70400BD946A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -227,8 +233,12 @@
 		91230D341A83EB01008CC500 /* Search Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88D71ED61A84433C00B83B7D /* UserSearchViewController.h */,
+				88D71ED71A84433C00B83B7D /* UserSearchViewController.m */,
 				91230D311A83EAF3008CC500 /* SearchViewController.h */,
 				91230D321A83EAF3008CC500 /* SearchViewController.m */,
+				88D71ED91A84485300B83B7D /* MapViewController.h */,
+				88D71EDA1A84485300B83B7D /* MapViewController.m */,
 			);
 			name = "Search Controller";
 			path = ..;
@@ -453,10 +463,12 @@
 				88B1320A1A82B06700F04C2A /* BossObject.m in Sources */,
 				887AEFEE1A816502007153E4 /* CameraViewController.m in Sources */,
 				9138C7631A813EBB0097C0EA /* HomeViewController.m in Sources */,
+				88D71ED81A84433C00B83B7D /* UserSearchViewController.m in Sources */,
 				88D71ECC1A82F9F600B83B7D /* HashTag.m in Sources */,
 				9138C7601A813EBB0097C0EA /* AppDelegate.m in Sources */,
 				88D085D81A824AF300CB4B52 /* CommentsViewController.m in Sources */,
 				883CB8FB1A8297830041559A /* SignUpViewController.m in Sources */,
+				88D71EDB1A84485300B83B7D /* MapViewController.m in Sources */,
 				9138C75D1A813EBB0097C0EA /* main.m in Sources */,
 				9100884B1A82C91500BD946A /* ProfileViewController.m in Sources */,
 			);

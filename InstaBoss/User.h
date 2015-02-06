@@ -14,4 +14,6 @@
 @property NSString *password;
 @property NSString *emailAddress;
 
+- (BOOL)isMatch:(NSString *)match;
+
 @end

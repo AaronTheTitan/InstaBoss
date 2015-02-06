@@ -46,14 +46,15 @@
     self.latitude = parse[@"Latitude"];
     self.longitude = parse[@"Longitude"];
 
-    self.currentLocation = [[MKPointAnnotation alloc] init];
-    self.currentLocation.title = @"Current Location";
-    self.currentLocation.coordinate = CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
-
-    self.image = [UIImage imageWithData:[parse[@"Image"] getData:nil]];
-
+    self.location = [[MKPointAnnotation alloc] init];
+    self.location.title = self.caption;
+    self.location.coordinate = CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
     
     return self;
+}
+
+- (void)loadImage {
+    self.image = [UIImage imageWithData:[self.parseObject[@"Image"] getData:nil]];
 }
 
 - (void) saveComments:(void (^)(BOOL succeeded, NSError *error))completionMethod {
@@ -69,8 +70,8 @@
 
     self.photoId = [BossObject generateID:self.caption];
 
-    self.latitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.latitude];
-    self.longitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.longitude];
+    self.latitude = [NSNumber numberWithDouble:self.location.coordinate.latitude];
+    self.longitude = [NSNumber numberWithDouble:self.location.coordinate.longitude];
 
     if(self.image) {
         NSData *imageData = UIImagePNGRepresentation(self.image);
