@@ -748,13 +748,13 @@
                                 <exclude reference="XDn-6r-yzL"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="M7x-Kn-HSq"/>
                                 <exclude reference="ALy-2b-Ezk"/>
                                 <exclude reference="Q85-qH-g4t"/>
                                 <exclude reference="jRY-Wo-fcT"/>
                                 <exclude reference="SDM-HD-JuX"/>
                                 <exclude reference="Y3l-IB-9Pk"/>
                                 <exclude reference="oMm-aS-c1V"/>
-                                <exclude reference="M7x-Kn-HSq"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -763,13 +763,13 @@
                                 <include reference="XDn-6r-yzL"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="M7x-Kn-HSq"/>
                                 <include reference="ALy-2b-Ezk"/>
                                 <include reference="Q85-qH-g4t"/>
                                 <include reference="jRY-Wo-fcT"/>
                                 <include reference="SDM-HD-JuX"/>
                                 <include reference="Y3l-IB-9Pk"/>
                                 <include reference="oMm-aS-c1V"/>
-                                <include reference="M7x-Kn-HSq"/>
                             </mask>
                         </variation>
                     </view>
@@ -792,6 +792,7 @@
                         <viewControllerLayoutGuide type="bottom" id="g3V-MA-7Yn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3a4-Wk-wmX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz6-vH-D8f">
@@ -844,13 +845,13 @@
                                 <exclude reference="lf0-ja-HQT"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Mm6-Bl-2Ng"/>
                                 <exclude reference="1fB-BA-0fw"/>
                                 <exclude reference="1t2-9T-L7k"/>
                                 <exclude reference="nML-tu-Zoa"/>
                                 <exclude reference="3mP-ih-YFz"/>
                                 <exclude reference="bJC-Ok-ey4"/>
                                 <exclude reference="vyK-Uo-4mc"/>
-                                <exclude reference="Mm6-Bl-2Ng"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -859,18 +860,19 @@
                                 <include reference="lf0-ja-HQT"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Mm6-Bl-2Ng"/>
                                 <include reference="1fB-BA-0fw"/>
                                 <include reference="1t2-9T-L7k"/>
                                 <include reference="nML-tu-Zoa"/>
                                 <include reference="3mP-ih-YFz"/>
                                 <include reference="bJC-Ok-ey4"/>
                                 <include reference="vyK-Uo-4mc"/>
-                                <include reference="Mm6-Bl-2Ng"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="mapPhotos" destination="lf0-ja-HQT" id="3FY-dx-V7D"/>
+                        <segue destination="74j-te-NgP" kind="presentation" identifier="ToCommentsFromMap" id="PKS-Lj-sXK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grD-Zh-aNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1711,5 +1713,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ofF-1B-gYf"/>
+        <segue reference="PKS-Lj-sXK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -96,7 +96,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    NSData *imageData = UIImageJPEGRepresentation(chosenImage);
+    NSData *imageData = UIImageJPEGRepresentation(chosenImage, 1);
     PFFile *imageFile = [PFFile fileWithName:@"userPhoto" data:imageData];
 
     self.imageTarget.image = chosenImage;
