@@ -22,7 +22,7 @@
     IBOutlet UILabel *userProfileDescription;
     IBOutlet UILabel *userURL;
 
-    BOOL isEditing;
+//    BOOL isEditing;
 
     IBOutlet UILabel *labelChangePassword;
     IBOutlet UITextField *textFieldChangeEmail;
@@ -33,8 +33,7 @@
 
     IBOutlet UIImageView *imageViewProfile;
 
-    PFUser *currentUser;
-    NSMutableArray *photos;
+//    NSMutableArray *photos;
 }
 @end
 
@@ -48,7 +47,13 @@
 - (IBAction)tapButtonEditPhoto:(UIButton *)sender {
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+        textFieldDisplayName.text = userDisplayName.text;
+        textFieldProfileDescription.text = userProfileDescription.text;
+        textFieldURL.text = userURL.text;
+}
 
 //----------------------------------------------------------------
 
@@ -83,9 +88,9 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
 
     NSData *imageData = UIImageJPEGRepresentation(chosenImage, 1);
-    PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_profilePhoto.jpg", currentUser.username] data:imageData];
+    PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@_profilePhoto.jpg", self.currentUser.username] data:imageData];
 
-    currentUser[@"userPhoto"] = imageFile;
+    self.currentUser[@"userPhoto"] = imageFile;
     [imageFile saveInBackground];
 
     imageViewProfile.image = chosenImage;
@@ -132,19 +137,19 @@
 //        [buttonEditProfile setTitle:@"Edit Your Profile" forState:UIControlStateNormal];
 
 
-        [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            currentUser.username = textFieldDisplayName.text;
-            currentUser[@"userDescription"] = textFieldProfileDescription.text;
-            currentUser[@"url"] = textFieldURL.text;
+        [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            self.currentUser.username = textFieldDisplayName.text;
+            self.currentUser[@"userDescription"] = textFieldProfileDescription.text;
+            self.currentUser[@"url"] = textFieldURL.text;
         }];
 
-        userProfileDescription.text = currentUser[@"userDescription"];
-        userURL.text = currentUser[@"url"];
+        userProfileDescription.text = self.currentUser[@"userDescription"];
+        userURL.text = self.currentUser[@"url"];
     }
 
     if (![textFieldChangeEmail.text isEqualToString:@""]) {
-        currentUser.email = textFieldChangeEmail.text;
-        [currentUser saveInBackground];
+        self.currentUser.email = textFieldChangeEmail.text;
+        [self.currentUser saveInBackground];
     }
 }
 

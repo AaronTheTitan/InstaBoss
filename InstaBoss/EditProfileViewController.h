@@ -10,5 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface EditProfileViewController : UIViewController
+@property PFUser *currentUser;
+
 
 @end

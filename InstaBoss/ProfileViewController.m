@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "Photo.h"
 #import "ImageCollectionViewCell.h"
+#import "EditProfileViewController.h"
 
 @interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -57,7 +58,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
 
     photos = [NSMutableArray new];
     currentUser = [PFUser currentUser];
@@ -111,6 +112,19 @@
     [PFUser logOut];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    EditProfileViewController *editVC = segue.destinationViewController;
+//    editVC.currentUser = currentUser;
+//
+//}
+
+
+
+
+
+
+
 
 
 @end
